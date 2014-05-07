@@ -1,0 +1,380 @@
+//SVENSK
+
+//Uber - Belial
+Actor Belial
+{
+	Health 5000
+	Radius 24
+	Height 60
+	Mass 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 //No Knockback power
+	Speed 7
+	MeleeDamage 1000 //Just incase.
+	MaxTargetRange 600 //Not too far in the fog.
+	PainChance 1
+	BloodColor "Blue"
+	Monster
+	+FLOAT
+	+FLOATBOB
+	+NOGRAVITY
+	+NOICEDEATH
+	+LOOKALLAROUND
+	SeeSound ""
+	PainSound "Belial/Hurt"
+	DeathSound "Belial/Death"
+	ActiveSound ""
+	Obituary "%o was forgotten."
+	HitObituary "%o was forgotten."
+	States
+	{
+	Spawn:
+		HIER A 0 Bright A_SpawnItemEx("ArcusRainBoltFast",Random(-640,640),Random(-640,640),0)
+		HIER A 0 Bright A_Wander
+		HIER A 0 Bright A_SpawnItemEx("BelialGhostA",0,0,0,0,0,0)
+		HIER A 0 Bright A_SpawnItemEx("BelialGhostA",0,0,0,0,0,0)
+		HIER A 1 Bright A_Look
+		Loop
+	See:
+		HIER A 0 Bright A_SpawnItemEx("BelialGhostA",0,0,0,0,0,0)
+		HIER A 0 Bright A_SpawnItemEx("BelialGhostA",0,0,0,0,0,0)
+		HIER A 1 Bright
+		HIER A 0 Bright A_JumpIfCloser(2600,"Free")
+		HIER A 0 Bright
+		Goto See
+	Free:
+		HIER A 0 Bright A_CustomMissile("BelialIntroStatement",30,0,0,0,0)
+		HIER A 0 Bright A_SpawnItemEx("ArcusRainBoltFast",Random(-640,640),Random(-640,640),0)
+		HIER A 0 Bright A_SpawnItemEx("BelialGhostA",0,0,0,0,0,0)
+		HIER A 0 Bright A_SpawnItemEx("BelialGhostA",0,0,0,0,0,0)
+		HIER A 0 Bright A_Chase
+		HIER A 0 Bright A_Chase
+		HIER A 0 Bright A_Chase
+		HIER A 1 Bright A_Chase
+		HIER A 0 Bright
+		Goto Free+1
+	Melee:
+		HIER B 0 Bright A_PlaySound("Belial/Attack")
+		//XenoImp Balls
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,0,0,0)
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,-90,0,0)
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,90,0,0)
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,-180,0,0)
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,180,0,0)
+		//Animation Continuation //Rhymes //Inception //Of course.
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright
+		Goto Free+1
+	Missile:
+		HIER B 0 Bright A_PlaySound("Belial/Attack")
+		//XenoImp Balls
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,0,0,0)
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,-90,0,0)
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,90,0,0)
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,-180,0,0)
+		HIER B 0 Bright A_CustomMissile("XenoImpBallFast",30,0,180,0,0)
+		//Animation Continuation //Rhymes //Inception //Of course.
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 0 Bright A_SpawnItemEx("BelialGhostB",0,0,0,0,0,0)
+		HIER B 1 Bright A_FaceTarget
+		HIER B 0 Bright
+		Goto Free+1
+	Pain:
+		HIER C 0 Bright
+		HIER C 0 Bright A_SpawnItemEx("BelialGhostC",0,0,0,0,0,0)
+		HIER C 0 Bright A_SpawnItemEx("BelialGhostC",0,0,0,0,0,0)
+		HIER C 1 Bright A_Pain
+		HIER C 0 Bright A_SpawnItemEx("BelialGhostC",0,0,0,0,0,0)
+		HIER C 0 Bright A_SpawnItemEx("BelialGhostC",0,0,0,0,0,0)
+		HIER C 1 Bright
+		Goto Free+1
+	Death:
+		HIER C 0 A_ScreamAndUnblock
+		HIER CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC 1 Bright A_FadeOut(0.02)
+		HIER C 0
+		Stop
+	}
+}
+
+Actor BelialIntroStatement
+{
+    Radius 8
+    Height 8
+    Speed 50
+    Damage (0)
+	DontHurtShooter
+	DamageType "Normal"
+    PROJECTILE
+	+SEEKERMISSILE
+	+NOTIMEFREEZE
+	//+FULLVOLDEATH
+	+BOSS
+    RenderStyle Add
+    Alpha 1.0 //Solid appearance!
+	Scale 0.05
+    SeeSound ""
+    DeathSound "Belial/Intro"
+    States
+    {
+    Spawn:
+		TNT1 A 0 Bright
+        TNT1 A 1 Bright A_SeekerMissile(90,0)
+        TNT1 A 0 Bright
+		Loop
+    Death:
+		TNT1 A 0 Bright
+		TNT1 A 0 Bright
+        TNT1 AAAAAAAAAA 1 Bright
+        Stop
+    }
+}
+
+Actor BelialGhostA
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   VSpeed 0
+   PROJECTILE
+   -NOCLIP
+   +NOGRAVITY
+   BounceType "Doom"
+   +NOBLOCKMAP
+   +CLIENTSIDEONLY
+   RenderStyle Translucent
+   Alpha 0.80
+   States
+   {
+   Spawn:
+   Death:
+      HIER A 0 Bright ThrustThingZ(0,random(12,20),random(0,1),random(0,1))
+	  HIER A 0 ThrustThing(random(0,255),random(12,20),1,0)
+	  HIER AA 1 Bright
+	  HIER A 0
+      Stop
+   }
+}
+
+Actor BelialGhostB
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   VSpeed 0
+   PROJECTILE
+   -NOCLIP
+   +NOGRAVITY
+   BounceType "Doom"
+   +NOBLOCKMAP
+   +CLIENTSIDEONLY
+   RenderStyle Translucent
+   Alpha 0.80
+   States
+   {
+   Spawn:
+   Death:
+      HIER B 0 Bright ThrustThingZ(0,random(12,20),random(0,1),random(0,1))
+	  HIER B 0 ThrustThing(random(0,255),random(12,20),1,0)
+	  HIER BB 1 Bright
+	  HIER B 0
+      Stop
+   }
+}
+
+Actor BelialGhostC
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   VSpeed 0
+   PROJECTILE
+   -NOCLIP
+   +NOGRAVITY
+   BounceType "Doom"
+   +NOBLOCKMAP
+   +CLIENTSIDEONLY
+   RenderStyle Translucent
+   Alpha 0.80
+   States
+   {
+   Spawn:
+   Death:
+      HIER C 0 Bright ThrustThingZ(0,random(12,20),random(0,1),random(0,1))
+	  HIER C 0 ThrustThing(random(0,255),random(12,20),1,0)
+	  HIER CC 1 Bright
+	  HIER C 0
+      Stop
+   }
+}
+
+Actor XenoImpBallFast
+{
+	Radius 6
+	Height 8
+	Speed 20
+	FastSpeed 40
+	Damage (20)
+	Projectile
+	+RANDOMIZE
+	+SEEKERMISSILE
+	//RenderStyle Add
+	Decal impScorch
+	Alpha 1
+	SeeSound "imp/attack"
+	DeathSound "imp/shotx"
+	States
+	{
+	Spawn:
+		BALK A 1 bright A_SpawnItem("XenoImpBallTRAIL")
+		BALK A 0 A_FadeOut(0.02)
+		BALK A 0 A_SeekerMissile(30, 15)
+		BALK A 0 ThrustThing(random(0,255),20,1,0)
+		BALK A 0 ThrustThingZ(0, 16, random(0,1), 0) 
+		BALK A 1 bright A_SpawnItem("XenoImpBallTRAIL")
+		BALK A 0 A_FadeOut(0.02)
+		BALK A 0 A_SeekerMissile(30, 15)
+		BALK A 0 ThrustThing(random(0,255),20,1,0)
+		BALK A 0 ThrustThingZ(0, 16, random(0,1), 0) 
+		BALK B 1 bright A_SpawnItem("XenoImpBallTRAIL")
+		BALK A 0 A_FadeOut(0.02)
+		BALK B 0 A_SeekerMissile(30, 15)
+		BALK B 0 ThrustThing(random(0,255),20,1,0)
+		BALK B 0 ThrustThingZ(0, 16, random(0,1), 0) 
+		BALK B 1 bright A_SpawnItem("XenoImpBallTRAIL")
+		BALK A 0 A_FadeOut(0.02)
+		BALK B 0 A_SeekerMissile(30, 15)
+		BALK B 0 ThrustThing(random(0,255),20,1,0)
+		BALK B 0 ThrustThingZ(0, 16, random(0,1), 0) 
+		Loop
+	Death:
+	    BALK C 0 A_SpawnItem("XenoImpBallExplosion")
+		BALK C 0 A_SetTranslucent(1.0)
+		BALK CDE 6 bright
+		Stop
+	}
+}
+
+Actor ArcusRainBoltFast
+{
+    Radius 10
+    Height 16
+    Speed 0
+    Damage (10)
+	DontHurtShooter
+    PROJECTILE
+	-NOGRAVITY
+	Gravity 4.0
+	-QUARTERGRAVITY
+	-NOCLIP
+	-DOOMBOUNCE
+	-RIPPER
+	+CEILINGHUGGER
+	+RANDOMIZE
+	+SKYEXPLODE
+	+WINDTHRUST
+    RenderStyle Add
+    Alpha 1.0
+	DeathSound "Arcus/BoltDie"
+    States
+    {
+    Spawn:
+        RAEL A 0 Bright
+		RAEL AA 1 Bright
+		RAEL BB 1 Bright A_ChangeFlag("CEILINGHUGGER",0)
+        RAEL B 0 Bright
+		Loop
+    Death:
+        BAEL CCCCCDDDDEEE 1 Bright
+        Stop
+    }
+}

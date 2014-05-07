@@ -1,0 +1,731 @@
+// Zombies
+
+flickerlight2 ZOMBIEATK
+{
+    color 1.0 0.8 0.2
+    size 48
+    secondarySize 56
+    interval 1
+    offset 0 40 0
+}
+
+object DoomMarine
+{
+	frame PLAYF { light ZOMBIEATK }
+}
+
+object ZombieMan2
+{
+    frame POSSF { light ZOMBIEATK }
+}
+
+object ShotgunGuy2
+{
+    frame SPOSF { light ZOMBIEATK }
+}
+
+object ChaingunGuy2
+{
+    frame CPOSE { light ZOMBIEATK }
+    frame CPOSF { light ZOMBIEATK }
+}
+
+//SVENSK
+pointlight TeleportLife
+{
+    color 0.0 0.8 0.4
+    size 40
+}
+
+pointlight TeleportDeath1
+{
+    color 0.0 0.8 0.4
+    size 38
+}
+
+pointlight TeleportDeath2
+{
+    color 0.0 0.8 0.4
+    size 36
+}
+
+pointlight TeleportDeath3
+{
+    color 0.0 0.8 0.4
+    size 34
+}
+
+pointlight TeleportDeath4
+{
+    color 0.0 0.8 0.4
+    size 32
+}
+
+pointlight TeleportDeath5
+{
+    color 0.0 0.8 0.4
+    size 30
+}
+
+pointlight TeleportDeath6
+{
+    color 0.0 0.8 0.4
+    size 28
+}
+
+pointlight TeleportDeath7
+{
+    color 0.0 0.8 0.4
+    size 26
+}
+
+pointlight TeleportDeath8
+{
+    color 0.0 0.8 0.4
+    size 24
+}
+
+pointlight TeleportDeath9
+{
+    color 0.0 0.8 0.4
+    size 22
+}
+
+pointlight TeleportDeath10
+{
+    color 0.0 0.8 0.4
+    size 20
+}
+
+pointlight TeleportDeath11
+{
+    color 0.0 0.8 0.4
+    size 18
+}
+
+object TeleportPlasma
+{
+    frame TFOGA { light TeleportLife }
+	frame TFOGB { light TeleportLife }
+	frame TFOGC { light TeleportLife }
+	frame TFOGD { light TeleportLife }
+	frame TFOGE { light TeleportLife }
+	frame TFOGF { light TeleportLife }
+	//Dying from here out
+	frame TFOGG { light TeleportDeath1 }
+	frame TFOGH { light TeleportDeath2 }
+	frame TFOGI { light TeleportDeath3 }
+	frame TFOGJ { light TeleportDeath4 }
+	frame TFOGK { light TeleportDeath5 }
+	frame TFOGL { light TeleportDeath6 }
+	frame TFOGM { light TeleportDeath7 }
+	frame TFOGN { light TeleportDeath8 }
+	frame TFOGO { light TeleportDeath9 }
+	frame TFOGP { light TeleportDeath10 }
+	frame TFOGQ { light TeleportDeath11 }
+}
+
+//SVENSK
+//Sorrow Sphere
+
+pulselight SorrowLight
+{
+	color 0.2 0.8 1.0
+    size 24
+	secondarySize 36
+	interval 6
+}
+
+object SorrowSphere
+{
+	frame SORWA { light SorrowLight }
+	frame SORWB { light SorrowLight }
+	frame SORWC { light SorrowLight }
+	frame SORWD { light SorrowLight }
+}
+
+//SVENSK
+//Immune Sphere
+
+pointlight MidasLight
+{
+	color 1.0 0.84 0.0
+    size 32
+}
+
+pointlight MiniMidasLight
+{
+	color 0.25 0.21 0.0
+    size 4
+}
+
+object ImmuneSphere
+{
+	frame ABIMA { light MidasLight }
+	frame ABIMB { light MidasLight }
+	frame ABIMC { light MidasLight }
+}
+
+object ImmuneSparkle
+{
+	frame SPARA { light MiniMidasLight }
+	frame SPARB { light MiniMidasLight }
+	frame SPARC { light MiniMidasLight }
+	frame SPARD { light MiniMidasLight }
+	frame SPARE { light MiniMidasLight }
+	frame SPARF { light MiniMidasLight }
+	frame SPARG { light MiniMidasLight }
+	frame SPARH { light MiniMidasLight }
+}
+
+//Plasma Bolt
+
+pointlight CORSAIRPLASMABOLT
+{
+    color 0.0 0.0 2.0
+    size 18
+}
+
+pointlight CORSAIRPLASMABOLTLIFE
+{
+    color 0.0 0.2 1.2
+    size 26
+}
+
+object CorsairPlasmaBolt
+{
+    frame TRPLA { light CORSAIRPLASMABOLTLIFE }
+	frame TRPLB { light CORSAIRPLASMABOLTLIFE }
+	frame TRPLC { light CORSAIRPLASMABOLTLIFE }
+	frame TRPLD { light CORSAIRPLASMABOLTLIFE }
+	frame TRPLE { light CORSAIRPLASMABOLTLIFE }
+	frame TRPLF { light CORSAIRPLASMABOLTLIFE }
+	frame PLSSA { light CORSAIRPLASMABOLT }
+	frame PLSSB { light CORSAIRPLASMABOLT }
+	frame PLSSC { light CORSAIRPLASMABOLT }
+	frame PLSSD { light CORSAIRPLASMABOLT }
+	frame PLSSE { light CORSAIRPLASMABOLT }
+	frame PLSSF { light CORSAIRPLASMABOLT }
+	frame PLSSG { light CORSAIRPLASMABOLT }
+	frame PLSSH { light CORSAIRPLASMABOLT }
+	frame PLSSI { light CORSAIRPLASMABOLT }
+	frame PLSSJ { light CORSAIRPLASMABOLT }
+	frame PLSSK { light CORSAIRPLASMABOLT }
+	frame PLSSL { light CORSAIRPLASMABOLT }
+	frame PLSSM { light CORSAIRPLASMABOLT }
+	frame PLSSN { light CORSAIRPLASMABOLT }
+	frame PLSSO { light CORSAIRPLASMABOLT }
+	frame PLSSP { light CORSAIRPLASMABOLT }
+}
+
+
+//Flame Thrower Flames
+
+flickerlight FIRELIGHTZ
+{
+    color 1.0 0.2 0.02
+    size 16
+    secondarySize 32
+}
+
+object "FlameThrowerFlame"
+{
+    frame FRPRA { light FIRELIGHTZ }
+    frame FRPRB { light FIRELIGHTZ }
+    frame FRPRC { light FIRELIGHTZ }
+    frame FRPRD { light FIRELIGHTZ }
+}
+
+flickerlight BURNINGLIGHT1
+{
+    color 1.0 0.2 0.02
+    size 12
+    secondarySize 24
+}
+
+flickerlight BURNINGLIGHT2
+{
+    color 1.0 0.2 0.02
+    size 16
+    secondarySize 32
+}
+
+flickerlight BURNINGLIGHT3
+{
+    color 1.0 0.2 0.02
+    size 20
+    secondarySize 40
+}
+
+flickerlight BURNINGLIGHT4
+{
+    color 1.0 0.2 0.02
+    size 21
+    secondarySize 42
+}
+
+flickerlight BURNINGLIGHT5
+{
+    color 1.0 0.2 0.02
+    size 18
+    secondarySize 36
+}
+
+flickerlight BURNINGLIGHT6
+{
+    color 1.0 0.2 0.02
+    size 13
+    secondarySize 26
+}
+
+flickerlight BURNINGLIGHT7
+{
+    color 1.0 0.2 0.02
+    size 9
+    secondarySize 18
+}
+
+object "InfernoFlame2"
+{
+    frame BFLMA { light BURNINGLIGHT1 }
+    frame BFLMB { light BURNINGLIGHT2 }
+    frame BFLMC { light BURNINGLIGHT3 }
+    frame BFLMD { light BURNINGLIGHT4 }
+    frame BFLME { light BURNINGLIGHT5 }
+    frame BFLMF { light BURNINGLIGHT6 }
+    frame BFLMG { light BURNINGLIGHT7 }
+}
+
+//GL Arcus
+
+flickerlight ArcusBoltLight
+{
+	color 1.0 0.5 0.8
+    size 20
+    secondarySize 30
+}
+
+object ArcusBolt
+{
+	frame BAELA { light ArcusBoltLight }
+	frame BAELB { light ArcusBoltLight }
+	frame BAELC { light ArcusBoltLight }
+	frame BAELD { light ArcusBoltLight }
+	frame BAELE { light ArcusBoltLight }
+}
+
+object ArcusRainBolt
+{
+	frame RAELA { light ArcusBoltLight }
+	frame RAELB { light ArcusBoltLight }
+	frame BAELC { light ArcusBoltLight }
+	frame BAELD { light ArcusBoltLight }
+	frame BAELE { light ArcusBoltLight }
+}
+
+//GL CacoStorm
+
+flickerlight CacoBoltLighting
+{
+	color 0.0 0.6 0.0
+    size 20
+    secondarySize 30
+}
+
+object CacoStormBolt
+{
+	frame CACSA { light CacoBoltLighting }
+	frame CACSB { light CacoBoltLighting }
+	frame CACSC { light CacoBoltLighting }
+	frame CACSD { light CacoBoltLighting }
+	frame CACSE { light CacoBoltLighting }
+}
+
+object CacoLightning
+{
+	frame CACSA { light CacoBoltLighting }
+	frame CACSB { light CacoBoltLighting }
+}
+
+//GL Crescent Knight
+
+flickerlight CrescentLighting
+{
+	color 0.4 0.4 0.4
+    size 20
+    secondarySize 30
+}
+
+object CrescentBolt
+{
+	frame 5001A { light CrescentLighting }
+	frame 5001B { light CrescentLighting }
+	frame 5001C { light CrescentLighting }
+	frame 5001D { light CrescentLighting }
+	frame 5001E { light CrescentLighting }
+}
+
+flickerlight CrescentRevival
+{
+	color 0.8 0.8 0.8
+	size 70
+	secondarySize 80
+}
+
+object CrescentRevivalGL
+{
+	frame TNT1A { light CrescentRevival }
+}
+
+//GL Forgotten One
+
+flickerlight ForgottenLight
+{
+	color 1.0 0.0 1.0
+    size 40
+    secondarySize 20
+}
+
+object ForgottenOne
+{
+	frame FOREA { light ForgottenLight }
+	frame FOREB { light ForgottenLight }
+	frame FOREC { light ForgottenLight }
+	frame FORED { light ForgottenLight }
+	frame FOREE { light ForgottenLight }
+	frame FOREF { light ForgottenLight }
+	frame FOREG { light ForgottenLight }
+	frame FOREH { light ForgottenLight }
+	frame FOREI { light ForgottenLight }
+	frame FOREJ { light ForgottenLight }
+	frame FOREK { light ForgottenLight }
+}
+
+//GL Hell Hunter
+
+flickerlight InfernoBoltL1
+{
+	color 1.0 0.2 0.2
+    size 50
+    secondarySize 100
+	chance 0
+}
+
+flickerlight InfernoBoltL2
+{
+	color 1.0 0.25 0.25
+    size 60
+    secondarySize 120
+	chance 0
+}
+
+flickerlight InfernoBoltL3
+{
+	color 1.0 0.3 0.3
+    size 80
+    secondarySize 160
+	chance 0
+}
+
+flickerlight InfernoBoltL4
+{
+	color 1.0 0.4 0.4
+    size 90
+    secondarySize 170
+	chance 0
+}
+
+flickerlight InfernoBoltL5
+{
+	color 1.0 0.5 0.5
+    size 100
+    secondarySize 180
+	chance 0
+}
+
+object InfernoBolt
+{
+	frame INBLA { light InfernoBoltL1 }
+	frame INBLA { light InfernoBoltL2 }
+	frame INBLA { light InfernoBoltL3 }
+	frame INBLA { light InfernoBoltL4 }
+	frame INBLA { light InfernoBoltL5 }
+}
+
+//GL Crescent Knight
+
+flickerlight ObliteratorBoltLight
+{
+	color 0.6 0.6 0.0
+    size 20
+    secondarySize 30
+}
+
+object ObliteratorYellowBolt
+{
+	frame HWFBA { light ObliteratorBoltLight }
+	frame HWFBB { light ObliteratorBoltLight }
+	frame HWFBC { light ObliteratorBoltLight }
+	frame HWFBD { light ObliteratorBoltLight }
+	frame HWFBE { light ObliteratorBoltLight }
+}
+
+object ObliteratorYellowBoltNB
+{
+	frame HWFBA { light ObliteratorBoltLight }
+	frame HWFBB { light ObliteratorBoltLight }
+	frame HWFBC { light ObliteratorBoltLight }
+	frame HWFBD { light ObliteratorBoltLight }
+	frame HWFBE { light ObliteratorBoltLight }
+}
+
+//Player Plasma Bolt
+
+pointlight PLASMABOLT
+{
+    color 0.0 1.0 0.1
+    size 28
+}
+
+flickerlight PLASMAB_X1
+{
+    color 0.2 1.0 0.2
+    size 32
+    secondarySize 36
+    chance 0.4
+}
+
+flickerlight PLASMAB_X2
+{
+    color 0.2 0.8 0.2
+    size 40
+    secondarySize 44
+    chance 0.4
+}
+
+flickerlight PLASMAB_X3
+{
+    color 0.1 0.5 0.1
+    size 32
+    secondarySize 36
+    chance 0.4
+}
+
+flickerlight PLASMAB_X4
+{
+    color 0.0 0.2 0.0
+    size 4
+    secondarySize 8
+    chance 0.4
+}
+
+object PlasmaBolt
+{
+    frame GREPA { light PLASMABOLT }
+	frame GREPB { light PLASMABOLT }
+	frame GREPC { light PLASMABOLT }
+	frame GREPD { light PLASMABOLT }
+	frame GREPE { light PLASMABOLT }
+	frame GREPF { light PLASMABOLT }
+
+    frame GREDA { light PLASMAB_X1 }
+    frame GREDB { light PLASMAB_X1 }
+    frame GREDC { light PLASMAB_X1 }
+    frame GREDD { light PLASMAB_X1 }
+    frame GREDE { light PLASMAB_X2 }
+    frame GREDF { light PLASMAB_X2 }
+    frame GREDG { light PLASMAB_X2 }
+    frame GREDH { light PLASMAB_X2 }
+    frame GREDI { light PLASMAB_X3 }
+    frame GREDJ { light PLASMAB_X3 }
+    frame GREDK { light PLASMAB_X3 }
+    frame GREDL { light PLASMAB_X3 }
+    frame GREDM { light PLASMAB_X4 }
+    frame GREDN { light PLASMAB_X4 }
+    frame GREDO { light PLASMAB_X4 }
+    frame GREDP { light PLASMAB_X4 }
+}
+
+//SVENSK
+//BFG
+pointlight BFGPLASMA
+{
+    color 0.0 1.0 0.1
+    size 56
+}
+
+flickerlight BFGPLASMAB_X1
+{
+    color 0.2 1.0 0.2
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight BFGPLASMAB_X2
+{
+    color 0.2 0.8 0.2
+    size 80
+    secondarySize 88
+    chance 0.4
+}
+
+flickerlight BFGPLASMAB_X3
+{
+    color 0.1 0.5 0.1
+    size 72
+    secondarySize 76
+    chance 0.4
+}
+
+flickerlight BFGPLASMAB_X4
+{
+    color 0.0 0.2 0.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight BFGPLASMAB_X5
+{
+    color 0.0 0.2 0.0
+    size 36
+    secondarySize 48
+    chance 0.4
+}
+
+flickerlight BFGPLASMAB_X6
+{
+    color 0.0 0.2 0.0
+    size 24
+    secondarySize 32
+    chance 0.4
+}
+
+pointlight PLASMALIGHTNINGBOLT
+{
+    color 0.0 1.0 0.1
+    size 32
+}
+
+object LargeBFGBall
+{
+	frame SHITA { light BFGPLASMA }
+	frame SHITB { light BFGPLASMA }
+	frame AHITA { light BFGPLASMAB_X1 }
+	frame AHITA { light BFGPLASMAB_X2 }
+	frame AHITA { light BFGPLASMAB_X3 }
+	frame AHITA { light BFGPLASMAB_X4 }
+	frame AHITA { light BFGPLASMAB_X5 }
+	frame AHITA { light BFGPLASMAB_X6 }
+}
+
+object PlasmaLightningBolt
+{
+	frame FIZLA { light PLASMALIGHTNINGBOLT }
+	frame FIZLB { light PLASMALIGHTNINGBOLT }
+	frame FIZLC { light PLASMALIGHTNINGBOLT }
+	frame FIZLD { light PLASMALIGHTNINGBOLT }
+	frame FIZLE { light PLASMALIGHTNINGBOLT }
+	frame FIZLF { light PLASMALIGHTNINGBOLT }
+	frame FIZLG { light PLASMALIGHTNINGBOLT }
+}
+
+//GL Missile
+
+flickerlight MissileSpark
+{
+    color 0.25 0.05 0.005
+    size 2
+    secondarySize 4
+}
+
+object AbusGunTrail
+{
+	frame ABSH { light MissileSpark }
+}
+
+pointlight MissileLight
+{
+    color 1.0 0.7 0.0
+    size 60
+}
+
+object Rocket
+{
+	frame REXP { light MissileLight }
+}
+
+//Puffs
+
+object NewBulletPuff
+{
+    frame BPFFA { light BPUFF1 }
+    frame BPFFB { light BPUFF2 }
+}
+
+//GL Xeno Imp
+
+flickerlight XenoBoltLight
+{
+	color 1.0 0.0 1.0
+    size 20
+    secondarySize 30
+}
+
+object XenoImpBall
+{
+	frame BALKA { light XenoBoltLight }
+	frame BALKB { light XenoBoltLight }
+	frame BALKC { light XenoBoltLight }
+	frame BALKD { light XenoBoltLight }
+	frame BALKE { light XenoBoltLight }
+}
+
+object XenoImpBallFast
+{
+	frame BALKA { light XenoBoltLight }
+	frame BALKB { light XenoBoltLight }
+	frame BALKC { light XenoBoltLight }
+	frame BALKD { light XenoBoltLight }
+	frame BALKE { light XenoBoltLight }
+}
+
+// Brightmaps
+
+//Cells\\
+
+//Small\\
+
+Brightmap Sprite ECAMA0 { map "ECABA0" }
+Brightmap Sprite ECAMB0 { map "ECABB0" }
+Brightmap Sprite ECAMC0 { map "ECABC0" }
+Brightmap Sprite ECAMD0 { map "ECABD0" }
+Brightmap Sprite ECAME0 { map "ECABE0" }
+Brightmap Sprite ECAMF0 { map "ECABF0" }
+
+//Big\\
+
+Brightmap Sprite ECAMG0 { map "ECABG0" }
+Brightmap Sprite ECAMH0 { map "ECABH0" }
+Brightmap Sprite ECAMI0 { map "ECABI0" }
+Brightmap Sprite ECAMJ0 { map "ECABJ0" }
+Brightmap Sprite ECAMK0 { map "ECABK0" }
+Brightmap Sprite ECAML0 { map "ECABL0" }
+
+//Sorrow-Sphere\\
+
+Brightmap Sprite SORWA0 { map "SORBA0" }
+Brightmap Sprite SORWB0 { map "SORBA0" }
+Brightmap Sprite SORWC0 { map "SORBA0" }
+Brightmap Sprite SORWD0 { map "SORBA0" }
+
+//Flame Thrower's Fuel Case\\
+
+Brightmap Sprite FUELA0 { map "FUEBA0" }
+Brightmap Sprite FUELB0 { map "FUEBA0" }
+Brightmap Sprite FUELC0 { map "FUEBA0" }
+Brightmap Sprite FUELD0 { map "FUEBA0" }
+Brightmap Sprite FUELE0 { map "FUEBA0" }
+Brightmap Sprite FUELF0 { map "FUEBA0" }
+Brightmap Sprite FUELG0 { map "FUEBA0" }

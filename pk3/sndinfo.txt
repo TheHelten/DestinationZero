@@ -1,0 +1,856 @@
+//Uber(s)
+
+Belial/Intro					DURINTRO
+Belial/Attack					DURATTAK
+Belial/Hurt						DURHURT
+Belial/Death					DURDEATH
+
+$Rolloff Belial/Intro linear 1600 5000
+//$Volume Belial/Intro 1.00
+
+//SVENSK
+
+Teleport/Start		TELIHELL
+$Limit Teleport/Start 0
+
+//SVENSK
+
+dualpistolsup					DUALPIUP
+
+weapons/shotguns/explosiveshot1	SXPSHOT1
+weapons/shotguns/explosiveshot2	SXPSHOT2
+
+$Random weapons/shotguns/explosiveshot { weapons/shotguns/explosiveshot1 weapons/shotguns/explosiveshot2 }
+
+weapons/autoshotgun/pump 		AUTOSGPM
+
+Weapons/FlameThrower/Fire 		DSFLAMET
+
+weapons/flamethrower/up			DSFLAMEU
+
+$Volume Weapons/FlameThrower/Fire 0.4
+$Limit Weapons/FlameThrower/Fire 0
+
+splintercannonup				SPLINTUP
+
+SplinterCannon/FragmentFire		SPLINTFR
+
+SplinterCannon/FragmentHit1		SPLINTB1
+SplinterCannon/FragmentHit2		SPLINTB2
+SplinterCannon/FragmentHit3		SPLINTB3
+
+$Random SplinterCannon/FragmentHit		{ SplinterCannon/FragmentHit1 SplinterCannon/FragmentHit2 SplinterCannon/FragmentHit3 }				
+
+$Rolloff SplinterCannon/FragmentHit linear 256 1600
+$Rolloff SplinterCannon/FragmentHit1 linear 256 1600
+$Rolloff SplinterCannon/FragmentHit2 linear 256 1600
+$Rolloff SplinterCannon/FragmentHit3 linear 256 1600
+
+$Limit SplinterCannon/FragmentFire  0
+$Limit SplinterCannon/FragmentHit   0
+$Limit SplinterCannon/FragmentHit1  0
+$Limit SplinterCannon/FragmentHit2  0
+$Limit SplinterCannon/FragmentHit3  0
+
+$Volume SplinterCannon/FragmentHit  1.4
+$Volume SplinterCannon/FragmentHit1 1.4
+$Volume SplinterCannon/FragmentHit2 1.4
+$Volume SplinterCannon/FragmentHit3 1.4
+
+//Abomination
+
+Abomination/Sight			ABOMSEE
+Abomination/Pain			ABOMPAIN
+Abomination/Death			ABOMDIE
+
+//Abus-Gun
+
+abusgun/up			ABUSUP
+abusgun/load		ABUSLOAD
+abusgun/close		ABUSCLOS
+
+abusammo/bounce		ABUSBNCE
+
+abusgun/launch		ABUSFIRE
+
+abusgun/powerhit	ABUSPOWW
+
+$Random abusgun/explode { abusgunsplode1 abusgunsplode2 abusgunsplode3 abusgunsplode4 }
+
+abusgunsplode1		ABUSXLA1
+abusgunsplode2		ABUSXLA2
+abusgunsplode3		ABUSXLA3
+abusgunsplode4		ABUSXLA4
+
+$Limit abusgun/launch   0
+$Limit abusammo/bounce  0
+$Limit abusgun/powerhit 0
+
+//Annihilator Sounds
+
+$Random Annihilator/sight	{ ROESEE1 ROESEE2 ROESEE3 }
+$Random Annihilator/pain	{ ROEPAIN1 ROEPAIN2 ROEPAIN3 }
+$Random Annihilator/active	{ ROECHAT1 ROECHAT2 }
+Annihilator/death	ROEDIE
+
+ROESEE1		ROESEE1
+ROESEE2		ROESEE2
+ROESEE3		ROESEE3
+
+ROECHAT1	ROECHAT1
+ROECHAT2	ROECHAT2
+
+ROEPAIN1	ROEPAIN1
+ROEPAIN2	ROEPAIN2
+ROEPAIN3	ROEPAIN3
+
+$Rolloff Annihilator/sight linear 240 2400
+$Rolloff ROESEE1 linear 240 2400
+$Rolloff ROESEE2 linear 240 2400
+$Rolloff ROESEE3 linear 240 2400
+
+$Rolloff Annihilator/fire linear 240 2400
+$Rolloff ROEFIRE1 linear 240 2400
+$Rolloff ROEFIRE2 linear 240 2400
+$Rolloff ROEFIRE3 linear 240 2400
+$Rolloff ROEFIRE4 linear 240 2400
+$Rolloff ROEFIRE5 linear 240 2400
+
+$Random Annihilator/fire	{ ROEFIRE1 ROEFIRE2 ROEFIRE3 ROEFIRE4 ROEFIRE5 }
+$Random Annihilator/shotx   { WHITEXP1 WHITEXP2 }
+
+ROEFIRE1	ROEFIRE1
+ROEFIRE2	ROEFIRE2
+ROEFIRE3	ROEFIRE3
+ROEFIRE4	ROEFIRE4
+ROEFIRE5	ROEFIRE5
+
+WHITEXP1	WHITEXP1
+WHITEXP2	WHITEXP2
+
+//Arcus\\
+
+Arcus/Sight				ARCSIGHT
+Arcus/Active			ARCACTIV
+Arcus/Pain				ARCPAINS
+Arcus/Death				ARCDEATH
+
+Arcus/Melee				ARCCLAWS
+Arcus/BoltFly			ARCMSLGO
+Arcus/BoltDie			ARCMSLDI
+
+Arcus/SoulRelease		ARCRELEZ
+
+Arcus/PrayerAura		ARCPRAYR
+Arcus/LightAura			ARCLIGHT
+Arcus/IronAura			ARCIRONM
+Arcus/ConvictAura		ARCCONVC
+Arcus/DecrepifyAura		ARCDECRP
+Arcus/BurningAura		ARCBURNN
+Arcus/ShockingAura		ARCSHOCK
+
+$Random Arcus/Immolation { Arcus/Immolation1 Arcus/Immolation2 }
+Arcus/Immolation1		ARCIMMO1
+Arcus/Immolation2		ARCIMMO2
+
+$Random Arcus/LightningStrike { Arcus/LightningStrike1 Arcus/LightningStrike2 Arcus/LightningStrike3 }
+Arcus/LightningStrike1	ARCLBUL1
+Arcus/LightningStrike2	ARCLBUL2
+Arcus/LightningStrike3	ARCLBUL3
+
+$Limit Arcus/Sight			2
+$Limit Arcus/Pain			0
+$Limit Arcus/Melee			0
+$Limit Arcus/Death			2
+$Limit Arcus/BoltFly		0
+$Limit Arcus/BoltDie		0
+$Limit Arcus/SoulRelease 	0
+$Limit Arcus/PrayerAura		0
+$Limit Arcus/LightAura		0
+$Limit Arcus/IronAura		0
+$Limit Arcus/ConvictAura	0
+$Limit Arcus/DecrepifyAura	0
+$Limit Arcus/BurningAura	0
+$Limit Arcus/ShockingAura	0
+$Limit Arcus/Immolation		0
+$Limit Arcus/Immolation1	0
+$Limit Arcus/Immolation2	0
+
+//Arc-Lite Shock Cannon
+
+Weapons/ArcLiteCannonFire		DSARCLFR
+Weapons/ArcLiteCannonExplosion	DSARCLEX
+
+Weapons/Plasmalightning	PLASLIGH
+
+ArcliteUp						ARCLITEP
+
+$Limit Weapons/ArcLiteCannonFire		0
+$Limit Weapons/ArcLiteCannonExplosion	0
+$Limit Weapons/Plasmalightning			0
+
+//Broodling (Idea is obviously from Starcraft, kiddies.)
+
+$Random monsters/broodlingsight	{ monsters/broodlingsight1 monsters/broodlingsight2 monsters/broodlingsight3 monsters/broodlingsight4 }
+
+monsters/broodlingsight1	BROODSE1
+monsters/broodlingsight2	BROODSE2
+monsters/broodlingsight3	BROODSE3
+monsters/broodlingsight4	BROODSE4
+
+monsters/broodlingattack	BROODATK
+
+monsters/broodlingpain		BROODPAN
+
+monsters/broodlingdeath		BROODDIE
+
+$Random monsters/broodlingactive { monsters/broodlingactive1 monsters/broodlingactive2 monsters/broodlingactive3 monsters/broodlingactive4 monsters/broodlingactive5 }
+
+monsters/broodlingactive1	BROODAC1
+monsters/broodlingactive2	BROODAC2
+monsters/broodlingactive3	BROODAC3
+monsters/broodlingactive4	BROODAC4
+monsters/broodlingactive5	BROODAC5
+
+$Limit monsters/broodlingsee 3 //Because you ALREADY see this monster in packs...
+$Limit monsters/broodlingattack 5
+$Limit monsters/broodlingactive 2
+$Limit monsters/broodlingactive1 2
+$Limit monsters/broodlingactive2 2
+$Limit monsters/broodlingactive3 2
+$Limit monsters/broodlingactive4 2
+$Limit monsters/broodlingactive5 2
+$Limit monsters/broodlingactive6 2
+
+//Bruiser
+
+bruiser/sight		BRUISSEE
+bruiser/death		BRUISDIE
+
+$Random bruiser/pain { bruiser/pain1 bruiser/pain2 }
+
+bruiser/pain1		BRUISPN1
+bruiser/pain2		BRUISPN2
+
+bruiser/whoosh		BRUISWHS
+bruiser/melee		BRUISMEL
+
+bruiser/skullbounce	BRUISBNC
+
+$Random bruiser/walk { bruiser/walk1 bruiser/walk2 bruiser/walk3 }
+
+bruiser/walk1		BRUISWL1
+bruiser/walk2		BRUISWL2
+bruiser/walk3		BRUISWL3
+
+$Limit bruiser/whoosh 		0
+$Limit bruiser/melee 		0
+$Limit bruiser/skullbounce 	0
+$Limit bruiser/pain			0
+$Limit bruiser/pain1		0
+$Limit bruiser/pain2 		0
+$Limit bruiser/sight 		0
+$Limit bruiser/death 		0
+$Limit bruiser/walk			0
+$Limit bruiser/walk1		0
+$Limit bruiser/walk2		0
+$Limit bruiser/walk3		0
+
+//CacoStorm
+
+cacostrm/sight				DSCECSIT
+
+cacostrm/active				DSCECACT
+
+cacostrm/pains1				DSCECPN1
+cacostrm/pains2				DSCECPN2
+cacostrm/pains3				DSCECPN3
+cacostrm/pains4				DSCECPN4
+
+$Random cacostrm/pain { cacostrm/pains1 cacostrm/pains2 cacostrm/pains3 cacostrm/pains4 }
+
+cacostrm/death				DSCECDTH
+
+cacostrm/launchball			DSCECLNC
+cacostrm/quake				DSCECQUK
+
+$Random cacostrm/thunder { thunder/hit1 thunder/hit2 }
+thunder/hit1 				THNDS01
+thunder/hit2 				THNDS02
+
+$Limit thunder/hit1 0
+$Limit thunder/hit2 0
+$Limit thunder/hit 0
+
+//Caco Orchestra
+
+cacostra/sight		CATRSITE
+cacostra/pain		CATRHURT
+cacostra/death		CATRDETH
+cacostra/screech	CATRSCRH
+cacostra/scrloop	CATRLOOP
+cacostra/screhit	CATRHITT
+
+$Limit cacostra/sight 0
+$Limit cacostra/pain 0
+$Limit cacostra/death 0
+$Limit cacostra/screech 0
+$Limit cacostra/scrloop 0
+$Limit cacostra/screhit 0
+
+//Chaingun
+weapons/chaingun/fire 		CHGNSHOT
+
+chaingunup					CHAINGNP
+
+chainguy/attack				CHGNSHOT
+$Limit chainguy/attack 0
+
+//The Ever Disliked- CHAINSAW!\\
+
+ChainsawRuggRugg		SAWNRUGG
+ChainsawPullUp			SAWNUP
+ChainsawHitBody			SAWNHIT
+ChainsawHitWall			SAWNMETL
+ChainsawRunning			SAWNRUNN
+
+$Volume ChainsawHitWall 0.3
+
+$Limit ChainsawHitWall 2 //Because would it NOT screech on a wall really bad to run a chainsaw across it?
+$Limit ChainsawHitBody 0
+$Limit ChainsawPullUp 0
+$Limit ChainsawRuggRugg 0
+$Limit ChainsawRunning 0
+
+//Corsair
+
+arachno/pain		DSSPIPAN
+arachno/die			DSSPIDIE
+arachno/see			DSSPIDEY
+
+arachno/rail		DSSPIRAL
+
+$Limit arachno/rail 0
+
+$Random arachno/act		{ arachno/act1 arachno/act2 }
+
+arachno/act1		DSSPIDA1
+arachno/act2		DSSPIDA2
+
+arachno/walk		DSSPIWLK
+
+$Limit arachno/walk 0
+
+//Crescent Knight
+
+crescent/sight				DSKNITSE
+
+crescent/active1			DSKNIAC1
+crescent/active2			DSKNIAC2
+
+$Random crescent/active { crescent/active1 crescent/active2 }
+
+crescent/pains1				DSKNIPN1
+crescent/pains2				DSKNIPN2
+
+$Random crescent/pain { crescent/pains1 crescent/pains2 }
+
+crescent/death				DSKNIDTH
+
+crescent/fire				DSKNISHT
+crescent/shotx				DSKNISHX
+
+//Cultist(s)
+
+$Random Cultist/Sight { Cultist/Sight1 Cultist/Sight2 Cultist/Sight3 Cultist/Sight4 Cultist/Sight5 Cultist/Sight6 Cultist/Sight7 Cultist/Sight8 Cultist/Sight9 }
+Cultist/Sight1		DSCLTSE1
+Cultist/Sight2		DSCLTSE2
+Cultist/Sight3		DSCLTSE3
+Cultist/Sight4		DSCLTSE4
+Cultist/Sight5		DSCLTSE5
+Cultist/Sight6		DSCLTSE6
+Cultist/Sight7		DSCLTSE7
+Cultist/Sight8		DSCLTSE8
+Cultist/Sight9		DSCLTSE9
+
+$Random Cultist/Pain { Cultist/Pain1 Cultist/Pain2 Cultist/Pain3 Cultist/Pain4 Cultist/Pain5 Cultist/Pain6 }
+Cultist/Pain1		DSCLTPN1
+Cultist/Pain2		DSCLTPN2
+Cultist/Pain3		DSCLTPN3
+Cultist/Pain4		DSCLTPN4
+Cultist/Pain5		DSCLTPN5
+Cultist/Pain6		DSCLTPN6
+
+$Random Cultist/Death { Cultist/Death1 Cultist/Death2 Cultist/Death3 Cultist/Death4 }
+Cultist/Death1		DSCLTDH1
+Cultist/Death2		DSCLTDH2
+Cultist/Death3		DSCLTDH3
+Cultist/Death4		DSCLTDH4
+
+Cultist/Dynamite	DSBLAUNC
+Cultist/Explosion	DSCAREXP
+
+$Random Cultist/Fire { Cultist/Fire1 Cultist/Fire2 }
+Cultist/Fire1		DSMSTOM1
+Cultist/Fire2		DSMSTOM2
+
+//Fate Lord
+
+fatelord/see		DSFATESE
+fatelord/act		DSFATEAC
+fatelord/magic		DSFATEMG
+fatelord/pain		DSFATEPN
+fatelord/die		DSFATEDI
+
+fatelord/ballgo		DSFATEGO
+fatelord/balldie	DSFATEHT
+
+fatelord/burning	DSFATEBN
+
+//Knuckle
+
+fistup				FISTRAIS
+
+$Random weapons/fist/punch { weapons/fist/punch1 weapons/fist/punch2 weapons/fist/punch3 }
+
+weapons/fist/punch1	FISTPUN1
+weapons/fist/punch2	FISTPUN2
+weapons/fist/punch3	FISTPUN3
+
+$Random weapons/fist/swing { weapons/fist/swing1 weapons/fist/swing2 }
+
+weapons/fist/swing1	FISTSW1
+weapons/fist/swing2	FISTSW2
+
+weapons/fist/hitwall	FISTWAL
+
+//Forgotten One
+
+forgotten/sight			DSFORGSI
+forgotten/melee			DSFORGML
+forgotten/pain			DSFORGPN
+forgotten/death			DSFORGSP
+forgotten/active		DSFORGAC
+
+$Limit forgotten/sight 0
+$Limit forgotten/melee 0
+$Limit forgotten/pain 0
+$Limit forgotten/death 0
+$Limit forgotten/active 0
+
+//Gloam
+
+gloam/see		GLOAMSEE //All of these are really freaky if you have no music on and no other objects make any sound...
+gloam/act		GLOAMACT
+gloam/hurt		GLOAMPAN
+gloam/die		GLOAMDIE
+
+gloam/boltlive	GLOAMBLT
+gloam/boltdeth	GLOAMBDI
+
+gloam/deception GLOAMDEP
+
+gloam/warping	GLOAMWRP
+
+$Limit gloam/boltlive 0
+$Limit gloam/boltdeth 0
+
+$Limit gloam/hurt 0
+$Limit gloam/act 0
+$Limit gloam/see 0
+$Limit gloam/die 0
+
+//Green-Abus
+
+abus/sight				DSABUSSI
+
+$Random fatso/active { fatso/active1 fatso/active2 }
+
+abus/active1			DSABUSA1
+abus/active1			DSABUSA2
+
+$Random abus/pain { abus/pain1 abus/pain2 abus/pain3 }
+
+abus/pain1				DSABUSP1
+abus/pain2				DSABUSP2
+abus/pain3				DSABUSP3
+
+abus/anger				DSABUSFR
+
+abus/death				DSABUSDI
+
+$Random abus/walk	{ abuswalk1 abuswalk2 abuswalk3 abuswalk4 abuswalk5 }
+
+abuswalk1	dsbgwlk1
+abuswalk2	dsbgwlk2
+abuswalk3	dsbgwlk3
+abuswalk4	dsbgwlk4
+abuswalk5	dsbgwlk5
+
+$Rolloff abus/walk linear 256 1600
+$Rolloff abuswalk1 linear 256 1600
+$Rolloff abuswalk2 linear 256 1600
+$Rolloff abuswalk3 linear 256 1600
+$Rolloff abuswalk4 linear 256 1600
+$Rolloff abuswalk5 linear 256 1600
+
+$Limit abus/walk 0
+$Limit abuswalk1 0
+$Limit abuswalk2 0
+$Limit abuswalk3 0
+$Limit abuswalk4 0
+$Limit abuswalk5 0
+
+abus/fire	CANONFIR
+$Limit abus/fire 0
+
+$Random abus/explode { abus/splode1 abus/splode2 abus/splode3 abus/splode4 }
+
+abus/splode1		ROCKXP01
+abus/splode2		ROCKXP02
+abus/splode3		ROCKXP03
+abus/splode4		ROCKXP04
+
+//Hell-Hunter
+
+Hunter/InfernoLaunch			INFERNGO
+Hunter/InfernoExplode			INFERNEX
+
+Hunter/Sight					HUNHELSE
+Hunter/Active					HUNHELAC
+Hunter/Hurt						HUNHELPN
+Hunter/Death					HUNHELDT
+Hunter/Step						HUNHELSP
+
+$Limit Hunter/Step 0
+
+//Larvae
+
+monsters/slimesight		SLIMSITE
+
+monsters/slimeattack	SLIMATK
+
+monsters/slimeactive	SLIMACTV
+
+$Limit monsters/slimesight 3 //Because you ALREADY see this monster in packs...
+$Limit monsters/slimeattack 5
+$Limit monsters/slimeactive 2
+
+//Memory Drone
+
+drone/sight			DSMRYDSE
+drone/pain			DSMRYDPN
+drone/death			DSMRYDTH
+
+$Random drone/active { drone/act1 drone/act2 }
+
+drone/act1			DSMRYDA1
+drone/act2			DSMRYDA2
+
+drone/melee			DSMRYDML
+
+//Nightmare
+
+nightmare/death DSNMRDTH
+nightmare/melee DSNMRATK
+
+//Obliterator
+
+obliteratorbolt			OBLTFIRE
+obliteratorbold			OBLTBOLD
+obliteratorsawyou		DSBRSSIT
+obliteratordied			DSBRSDTH
+obliteratorwarping		OBLTWARP
+obliteratorcloudcrack	OBLTCRAK
+clawpowerr				OBLTCLAW
+
+$Random obliteratorspoke		{ obliteratorspoke1 obliteratorspoke2 obliteratorspoke3 }
+
+obliteratorspoke1		DSBRSAC1
+obliteratorspoke2		DSBRSAC2
+obliteratorspoke3		DSBRSAC3
+
+$Random obliteratorblarg		{ obliteratorblarg1 obliteratorblarg2 obliteratorblarg3 }
+
+obliteratorblarg1		DSBRSPN1
+obliteratorblarg2		DSBRSPN2
+obliteratorblarg3		DSBRSPN3
+
+//Pistol
+
+$Random weapons/pistol/fire { weapons/pistol1 weapons/pistol2 weapons/pistol3 }
+
+weapons/pistol1			PISTFIR1
+weapons/pistol2			PISTFIR2
+weapons/pistol3			PISTFIR3
+
+pistolup				PISTOLUP
+
+$Random grunt/attack { weapons/pistol1 weapons/pistol2 weapons/pistol3 }
+
+//Plasma Bolt
+
+$Random weapons/plasmafr	{ weapons/plasmaln1 weapons/plasmaln2 weapons/plasmaln3 }
+
+weapons/plasmaln1	DSPLAFR1
+weapons/plasmaln2	DSPLAFR2
+weapons/plasmaln3	DSPLAFR3
+
+weapons/plasmaxh	DSPLADIE
+
+$Limit weapons/plasmafr 0
+$Limit weapons/plasmaln1 0
+$Limit weapons/plasmaln2 0
+$Limit weapons/plasmaln3 0
+$Limit weapons/plasmaxh 0
+
+plasmarifleup		PLASMAUP
+
+weapons/plasrafire	DSPLARAL
+
+//Rocket Launcher
+
+$Random weapons/rlan/fire { weapons/rlan/fire1 weapons/rlan/fire2 weapons/rlan/fire3 }
+
+weapons/rlan/fire1  MISSILE1
+weapons/rlan/fire2	MISSILE2
+weapons/rlan/fire3	MISSILE3
+
+$Random weapons/rlan/explosion { rocketsplode1 rocketsplode2 rocketsplode3 rocketsplode4 }
+
+rocketsplode1		ROCKXP01
+rocketsplode2		ROCKXP02
+rocketsplode3		ROCKXP03
+rocketsplode4		ROCKXP04
+
+$Limit weapons/rlan/fire1 0
+$Limit weapons/rlan/fire2 0
+$Limit weapons/rlan/fire3 0
+$Limit weapons/rlan/fire  0
+
+$Limit rocketsplode1 0
+$Limit rocketsplode2 0
+$Limit rocketsplode3 0
+$Limit rocketsplode4 0
+
+rocketlauncherup	ROCKETUP
+
+//Shotgun
+
+weapons/shotgun/fire STGNSHOT
+weapons/shotgun/pump STGNPUMP
+
+shotgunup			 SHOTGUNP
+
+shotguy/attack 		 STGNSHOT
+
+//Various Sounds!\\
+
+$Alias misc/health_pkup		misc/heal	// Pickup Health
+$Limit misc/health_pkup 0
+
+$Alias misc/armor_pkup		misc/armor	// Pickup Armor
+$Limit misc/armor_pkup 0
+
+$Alias misc/ammo_pkup		misc/ammo	// Pickup Ammo
+$Limit misc/ammo_pkup 0
+
+$Alias misc/w_pkup          misc/weap   // Pickup Weapon
+$Limit misc/w_pkup 0
+
+$Alias misc/i_pkup			misc/item   // Pickup Item
+$Limit misc/i_pkup 0
+
+$Alias misc/p_pkup			misc/power  // Pickup Powerup
+$Limit misc/p_pkup 0
+
+misc/weap 			WEAPONUP
+
+$Limit misc/weap 0
+
+misc/armor			ARMOURUP
+
+$Limit misc/armor 0
+
+misc/heal 			HEALTHUP
+
+$Limit misc/heal 0
+
+misc/item			ITEMGRAB
+
+$Limit misc/item 0
+
+misc/power			POWERUPS
+
+$Limit misc/power 0
+
+$Random misc/ammo { misc/ammo1 misc/ammo2 misc/ammo3 misc/ammo4 misc/ammo5 misc/ammo6 misc/ammo7 misc/ammo8 misc/ammo9 misc/ammo10 misc/ammo11 misc/ammo12 misc/ammo13 misc/ammo14 misc/ammo15 misc/ammo16 misc/ammo17 misc/ammo18 misc/ammo19 misc/ammo20 misc/ammo21 misc/ammo22 misc/ammo23 misc/ammo24 misc/ammo25 misc/ammo26 misc/ammo27 misc/ammo28 misc/ammo29 misc/ammo30 misc/ammo31 misc/ammo32 misc/ammo33 misc/ammo34 misc/ammo35 misc/ammo36 misc/ammo37 misc/ammo38 misc/ammo39 misc/ammo40 misc/ammo41 misc/ammo42 misc/ammo43 misc/ammo45 misc/ammo46 misc/ammo47 misc/ammo48 misc/ammo49 misc/ammo50 }
+
+misc/ammo1			AMMOCLK1
+misc/ammo2			AMMOCLK2
+misc/ammo3			AMMOCLK3
+misc/ammo4			AMMOCLK4
+misc/ammo5			AMMOCLK5
+misc/ammo6			AMMOCLK6
+misc/ammo7			AMMOCLK7
+misc/ammo8			AMMOCLK8
+misc/ammo9			AMMOCLK9
+misc/ammo10			AMMCLK10
+misc/ammo11			AMMCLK11
+misc/ammo12			AMMCLK12
+misc/ammo13			AMMCLK13
+misc/ammo14			AMMCLK14
+misc/ammo15			AMMCLK15
+misc/ammo16			AMMCLK16
+misc/ammo17			AMMCLK17
+misc/ammo18			AMMCLK18
+misc/ammo19			AMMCLK19
+misc/ammo20 		AMMCLK20
+misc/ammo21			AMMCLK21
+misc/ammo22			AMMCLK22
+misc/ammo23			AMMCLK23
+misc/ammo24			AMMCLK24
+misc/ammo25			AMMCLK25
+misc/ammo26			AMMCLK26
+misc/ammo27			AMMCLK27
+misc/ammo28			AMMCLK28
+misc/ammo29			AMMCLK29
+misc/ammo30 		AMMCLK30
+misc/ammo31			AMMCLK31
+misc/ammo32			AMMCLK32
+misc/ammo33			AMMCLK33
+misc/ammo34			AMMCLK34
+misc/ammo35			AMMCLK35
+misc/ammo36			AMMCLK36
+misc/ammo37			AMMCLK37
+misc/ammo38			AMMCLK38
+misc/ammo39			AMMCLK39
+misc/ammo40			AMMCLK40
+misc/ammo41			AMMCLK41
+misc/ammo42			AMMCLK42
+misc/ammo43			AMMCLK43
+//misc/ammo44			AMMCLK44
+misc/ammo45			AMMCLK45
+misc/ammo46			AMMCLK46
+misc/ammo47			AMMCLK47
+misc/ammo48			AMMCLK48
+misc/ammo49			AMMCLK49
+misc/ammo50 		AMMCLK50
+
+$Limit misc/ammo 0
+
+$Limit misc/ammo1 0
+$Limit misc/ammo2 0
+$Limit misc/ammo3 0
+$Limit misc/ammo4 0
+$Limit misc/ammo5 0
+$Limit misc/ammo6 0
+$Limit misc/ammo7 0
+$Limit misc/ammo8 0
+$Limit misc/ammo9 0
+$Limit misc/ammo10 0
+$Limit misc/ammo11 0
+$Limit misc/ammo12 0
+$Limit misc/ammo13 0
+$Limit misc/ammo14 0
+$Limit misc/ammo15 0
+$Limit misc/ammo16 0
+$Limit misc/ammo17 0
+$Limit misc/ammo18 0
+$Limit misc/ammo19 0
+$Limit misc/ammo20 0
+$Limit misc/ammo21 0
+$Limit misc/ammo22 0
+$Limit misc/ammo23 0
+$Limit misc/ammo24 0
+$Limit misc/ammo25 0
+$Limit misc/ammo26 0
+$Limit misc/ammo27 0
+$Limit misc/ammo28 0
+$Limit misc/ammo29 0
+$Limit misc/ammo30 0
+$Limit misc/ammo31 0
+$Limit misc/ammo32 0
+$Limit misc/ammo33 0
+$Limit misc/ammo34 0
+$Limit misc/ammo35 0
+$Limit misc/ammo36 0
+$Limit misc/ammo37 0
+$Limit misc/ammo38 0
+$Limit misc/ammo39 0
+$Limit misc/ammo40 0
+$Limit misc/ammo41 0
+$Limit misc/ammo42 0
+$Limit misc/ammo43 0
+//$Limit misc/ammo44 0 //Thanks, stupid ass wad corruption.
+$Limit misc/ammo45 0
+$Limit misc/ammo46 0
+$Limit misc/ammo47 0
+$Limit misc/ammo48 0
+$Limit misc/ammo49 0
+$Limit misc/ammo50 0
+
+//Super Shotgun
+
+weapons/ssg/fire SSGSHOT
+
+weapons/ssg/open SSGOPEN
+
+$Random weapons/ssg/in { ssgload1 ssgload2 ssgload3 }
+
+ssgload1		SSLOAD1
+ssgload2		SSLOAD2
+ssgload3		SSLOAD3
+
+$Limit weapons/ssg/fire 0
+
+$Rolloff weapons/ssg/fire linear 200 1600
+
+//$Volume weapons/ssg/fire 8.0
+
+$Limit weapons/ssg/open 0
+$Limit weapons/ssg/close 0
+$Limit ssgup 0
+
+$Limit weapons/ssg/in 0
+
+$Limit ssgload1 0
+$Limit ssgload2 0
+$Limit ssgload3 0
+
+weapons/ssg/close SSGCLOSE
+
+ssgup			  SUPERSGP
+
+//TimeSphere
+
+miscellaneous/timespherepulse DSTMPLSE
+miscellaneous/timespheregrab  DSTMGRAB
+
+//Bullet Puffs
+
+Puff/Ric1				DSRICH1
+Puff/Ric2				DSRICH2
+Puff/Ric3				DSRICH3
+Puff/Ric4				DSRICH4
+Puff/Ric5				DSRICH5
+Puff/Ric6				DSRICH6
+Puff/Ric7				DSRICH7
+
+$Random Puff/Richochet	{ Puff/Ric1 Puff/Ric2 Puff/Ric3 Puff/Ric4 Puff/Ric5 Puff/Ric6 Puff/Ric7 }
+
+//Blood Puffs (Lol)
+
+Misc/XDeath1A			DSXDTH1A
+Misc/XDeath1B			DSXDTH1B
+Misc/XDeath1C			DSXDTH1C
+Misc/XDeath1D			DSXDTH1D
+Misc/XDeath1E			DSXDTH1E
+Misc/XDeath1F			DSXDTH1F
+
+$Random Misc/XDeath1				{ Misc/XDeath1A Misc/XDeath1B Misc/XDeath1C Misc/XDeath1D Misc/XDeath1E Misc/XDeath1F }
+
+//Xeno Imp
+xenoimpchange DSXECHNG
+xenoimpcloak DSCLOAK
+xenoimpuncloak DSUCLOAK

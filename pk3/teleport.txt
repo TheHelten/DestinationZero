@@ -1,0 +1,76 @@
+//I wanted this seperated mostly for my own convenience. It's really not so big
+//that it should have its own lump, but still, it's here to stay.
+Actor TeleportPlasmaSpawner : Spawnfire replaces TeleportFog
+{
+   Alpha 0.6
+   Scale 0.625
+   RenderStyle Add
+   -SOLID
+   +NOCLIP
+   +NOGRAVITY
+   -NONETID
+   Radius 1
+   Height 1
+   States
+   {
+   Spawn:
+    TELM A 0 Bright
+	TELM A 0 Bright A_SpawnItemEx("TeleportPlasma",0,0,20,0,0,0,0,SXF_CLIENTSIDE,0)
+	TELM A 0 Bright
+    Stop
+   }
+}
+
+Actor TeleportPlasma : SpawnFire
+{
+   Alpha 0.6
+   Scale 0.625
+   RenderStyle Add
+   -SOLID
+   -NOCLIP
+   -NONETID
+   +RANDOMIZE
+   +NOGRAVITY
+   +FLOORCLIP
+   +DONTSPLASH
+   Radius 8
+   Height 16
+   States
+   {
+   Spawn:
+    TELM A 0 Bright
+	TELM A 0 Bright A_PlaySound("Teleport/Start",5)
+	TELM ABCDEFABCDEFABCDEFABCDEFABCDEFGHIJKLMNOPQ 1 Bright A_SpawnItemEx("TeleporterSpark",0,0,8,Random(-2,2),Random(-2,2),Random(-2,2),0,SXF_CLIENTSIDE,0)
+    Stop
+   }
+}
+
+Actor TeleporterSpark : BulletPuff
+{
++FLOORCLIP
++DONTSPLASH
++NOTELEPORT
++NOGRAVITY
++RANDOMIZE
+-NONETID
+-LOWGRAVITY
+-DOOMBOUNCE
+Health 2
+Radius 1
+Height 2
+Speed  0
+Mass   0
+Scale 0.028
+States
+{
+  Spawn:
+  Death:
+    TELM A 0 Bright
+	TELM A 0 Bright //ThrustThing(random(0,255),random(2,4),1,0)
+	TELM A 0 Bright //ThrustThingZ(0, random(2,4), random(0,1), 0)
+	TELM A 0 Bright
+    TELM ABCDEF 1 Bright A_FadeOut(0.0125)
+	TELM A 0 Bright
+    Goto Death+3
+}
+}

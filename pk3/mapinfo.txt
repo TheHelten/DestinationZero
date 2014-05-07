@@ -1,0 +1,15 @@
+//Average MAP32.
+
+map map32 "Ingressus est ad inferos"
+titlepatch CWILV31
+music D_ULTIMA
+sky1 sky3 0.0
+next map33
+
+//The map(s) containing The Ubers.
+
+map MAP33 "The Forgotten Sands"
+next MAP16
+secretnext MAP16
+sky1 BLSKY
+music FORGOTEN

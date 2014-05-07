@@ -1,0 +1,91 @@
+//Messages, etc
+[enu default]
+QUITMSG = "Go ahead, leave, see if I care, you fuck.";
+
+// Quit Doom messages
+
+QUITMSG1 = "Kaos is like this, uncontrolled!";
+QUITMSG2 = "Listen, punk, you put down that gun...\n...and I put up mine.";
+QUITMSG3 = "Go fuck yourself, San Diego.";
+QUITMSG4 = "Guess you don't have balls of steel.";
+QUITMSG5 = "Next time you play, try out this super secret Doom code; IDGAF.";
+QUITMSG6 = "Retiring?";
+QUITMSG7 = "Looks like I win.";
+
+// Quit Doom II messages
+
+QUITMSG8 = "War ain't what it used to be.";
+QUITMSG9 = "Hah, you're probably rage-quitting\nAnd not even reading this message!";
+QUITMSG10 = "Press Y to disconnect from the internet.";
+QUITMSG11 = "THIS IS A QUIT MESSAGE.\n\n\nWhat... We're you expecting something clever?";
+QUITMSG12 = "One more for the scrap yard.";
+QUITMSG13 = "And another one bites the dust.";
+QUITMSG14 = "I guess you didn't feel so lucky, punk.";
+
+//Simple Death and Friendly Fire
+
+OB_DEFAULT = "%o died.";
+OB_FRIENDLY1 = "%k kills a friend.";
+OB_FRIENDLY2 = "%k murders an ally.";
+OB_FRIENDLY3 = "%k slays a team-mate.";
+OB_FRIENDLY4 = "%k wonders why finding friends is difficult...";
+
+//Various suicide messages
+
+OB_SUICIDE = "%o got tired of breathing.";
+OB_FALLING = "%o crashed like a flaming meteorite.";
+OB_CRUSH = "%o lost a fight with the Ceiling.";
+OB_EXIT = "%o hit the big red button of death.";
+OB_WATER = "%o had too much to drink.";
+OB_SLIME = "%o became a liquid.";
+OB_LAVA = "%o tried Shamanry; and melted in lava.";
+OB_BARREL = "%o wanted to be an arsonist.";
+OB_SPLASH = "%o died by chance.";
+OB_R_SPLASH = "%o sure taught that wall a lesson!";
+OB_ROCKET = "%o had nothing better to do than run into rockets.";
+
+//Lol
+
+CC_ZOMBIE = "Holy jumpin' shitballs";
+CC_SHOTGUN = "Get that crap outta here";
+CC_HEAVY = "Fuck, here we go again";
+CC_PAIN = "Autism Elemental";
+CC_SPIDER = "Autism Mastermind";
+CC_HERO = "Fuck this nigga";
+
+//Cheating Messages
+
+STSTR_DQDON = ">Godmode Activated";
+STSTR_DQDOFF = ">Godmode Deactivated";
+STSTR_KFAADDED = ">Full Inventory";
+STSTR_FAADDED = ">Happy Ammo";
+STSTR_NCON = ">No-Clipping Activated";
+STSTR_NCOFF = ">No-Clipping Deactivated";
+STSTR_CHOPPERS = "This needle looks sterile...";
+
+//Stuffies for your Keysies
+
+GOTBLUECARD = "Blue Keycard.";
+GOTYELWCARD = "Yellow Keycard.";
+GOTREDCARD = "Red Keycard.";
+GOTBLUESKUL = "Blue Skull.";
+GOTYELWSKUL = "Yellow Skull.";
+GOTREDSKUL = "Red Skull.";
+
+//More Pickup
+
+GOTARMOR = "Crowd control armor.";
+GOTMEGA = "Cerolium vest.";
+GOTHTHBONUS = "Health Bonus.";
+GOTARMBONUS = "Armor Bonus.";
+GOTSTIM = "Stimpack.";
+GOTMEDINEED = "Medikit!";
+GOTMEDIKIT = "Medikit.";
+GOTSUPER = "Super-Charge.";
+GOTMSPHERE = "Mega-Charge.";
+GOTBERSERK = "RIP AND TEAR, RIP AND TEAR!!!";
+GOTINVIS = "Partial Invisibility.";
+GOTSUIT = "Radiation Shielding suit.";
+GOTMAP = "Automap.";
+GOTVISOR = "Infrared goggles.";
+GOTINVUL = "Invulnerability.";
