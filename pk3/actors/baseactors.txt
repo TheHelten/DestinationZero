@@ -1,4 +1,4 @@
-actor BaseEffect
+Actor BaseEffect
 {
 	Radius 2
 	Height 2
@@ -20,17 +20,17 @@ actor BaseEffect
 	{
 		Spawn:
 			TNT1 AA 1
-			stop
+			Stop
 		Death:
 			TNT1 AA 1
-			stop
+			Stop
 	}
 }
 
-actor GenericTimer : Inventory
+Actor GenericTimer : Inventory
 {
-	inventory.amount 1
-	inventory.maxamount 9999
+	Inventory.amount 1
+	Inventory.maxamount 9999
 	-INVENTORY.INVBAR
 	+INVENTORY.UNDROPPABLE
 	+INVENTORY.HUBPOWER
@@ -38,6 +38,6 @@ actor GenericTimer : Inventory
 	{
 		Spawn:
 			TNT1 A -1
-			stop
+			Stop
 	}
 }
