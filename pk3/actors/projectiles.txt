@@ -1,0 +1,136 @@
+Actor AbusCannonBall
+{
+	Projectile
+	Radius 7
+	Height 7
+	Speed 36
+	Damage 10
+	Scale 0.8
+	Projectile 
+	+RANDOMIZE
+	+NOGRAVITY
+	+FORCEXYBILLBOARD
+	Gravity 1.0
+	SeeSound "abus/fire"
+	DeathSound "abus/explode"
+	Decal Bigscorch
+	DamageType "Normal"
+	States
+	{
+	Spawn:
+		MXMI A 0
+		MXMI A 0 A_GiveInventory("GenericTimer", 1)
+		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+		MXMI A 0 A_JumpIfInventory("GenericTimer", 20, "Gravity")
+		loop
+	Gravity:
+		MXMI A 0 A_ChangeFlag("NOGRAVITY", 0)
+		goto Falling
+	Falling:
+		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+		loop
+	Death:
+		MXMI A 0 Bright
+		MXMI A 0 Bright A_Explode(40,48,0)
+		MXMI A 0 Bright A_SpawnItemEx("AbusGunExplosion",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		MXMI A 0 Bright
+		TNT1 AA 1 Bright
+		stop
+	}
+}
+
+Actor AbusGunExplosion : BaseEffect
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   PROJECTILE
+   +NOCLIP
+   +NOGRAVITY
+   +NOBLOCKMAP
+   +FORCEXYBILLBOARD
+   +NOTIMEFREEZE
+   Scale 1.05
+   RenderStyle Add
+   Alpha 1.0
+   States
+   {
+   Spawn:
+   Death:
+      REXP B 0 Bright
+	  REXP B 0 Radius_Quake(4, 8, 0, 4, 0)
+	  REXP BCDEFGHIJKLMNO 2 Bright
+	  REXP O 0 Bright
+      Stop
+   }
+}
+
+Actor AbusPieceTrail : BaseEffect
+{
+	Speed 0
+	Damage 0
+	Scale 0.20
+	BounceType "Doom"
+	+RANDOMIZE
+	+MISSILE
+	+NOCLIP
+	+THRUACTORS
+	+NOTIMEFREEZE
+	-NOGRAVITY
+	-NOINTERACTION
+	Gravity 1.0
+	RenderStyle Add
+	Alpha 1.00
+	Obituary "%o got owned by an Abus Cannon trail... Ironic, shouldn't %g have HIT the cannon?"
+	States
+	{
+	Spawn:
+	Death:
+		ATRL ABABABABAB 1 Bright A_FadeOut(0.2)
+		Stop
+	}
+}
+
+Actor AbusGunBall : AbusCannonBall
+{
+	Speed 50 //Faster than the Green-Abus Cannon Ball.
+	Damage 200 //Stronger than the Green-Abus Cannon Ball.
+	ExplosionDamage 200 //Definetly Stronger explosion than the Green-Abus Cannon Ball.
+	ExplosionRadius 48
+	Obituary "%o sucked on %k's Cannon Balls."
+	DamageType "Normal"
+	Projectile
+	+NOTIMEFREEZE
+	-BOUNCEONACTORS
+	SeeSound ""
+	BounceType "Doom"
+	Gravity 0.75
+	BounceCount 2
+	States
+	{
+	Spawn:
+		ABSH A 0
+		ABSH A 0 A_GiveInventory("GenericTimer", 1)
+		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+		ABSH A 0 A_JumpIfInventory("GenericTimer", 20, "Gravity")
+		loop
+	Gravity:
+		ABSH A 0 A_ChangeFlag("NOGRAVITY", 0)
+		goto Falling
+	Falling:
+		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+		loop
+	Death:
+		ABSH A 0 Bright
+		ABSH A 0 Bright A_Explode(200,48,1)
+		ABSH A 0 Bright A_SpawnItemEx("AbusGunExplosion",0,0,0,0,0,0,0,128)
+		ABSH A 0 Bright
+		TNT1 AA 1 Bright
+		stop
+	// Abus Cannon Ball Abus Cannon Ball Abus Cannon Ball *Overload*
+	}
+}

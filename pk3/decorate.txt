@@ -1,5 +1,8 @@
-#Include "ubers.txt"
-#Include "teleport.txt"
+#Include "actors/baseactors.txt"
+#Include "actors/blood.txt"
+#Include "actors/ubers.txt"
+#Include "actors/teleport.txt"
+#Include "actors/projectiles.txt"
 
 //SVENSK
 //Firing State (annoying ass custom sprite requirements???) [Won't make sense to others viewing file. Fuck off.]
@@ -760,101 +763,6 @@ Actor AbusGunCannonAmmo : Ammo
 	}
 }
 
-Actor AbusGunBall
-{
-	Radius 7
-	Height 7
-	Speed 50 //Faster than the Green-Abus Cannon Ball.
-	Damage 200 //Stronger than the Green-Abus Cannon Ball.
-	Scale 0.8 //Same size as the Green-Abus Cannon Ball.
-	ExplosionDamage 200 //Definetly Stronger explosion than the Green-Abus Cannon Ball.
-	ExplosionRadius 48
-	Obituary "%o sucked on %k's Cannon Balls."
-	DamageType "Normal"
-	Projectile
-	+RANDOMIZE
-	+NOGRAVITY
-	+NOTIMEFREEZE
-	-BOUNCEONACTORS
-	BounceType "Doom"
-	Gravity 0.75
-	-ROCKETTRAIL
-	+FORCEXYBILLBOARD
-	RenderStyle Normal
-	BounceCount 2
-	Alpha 10.0
-	SeeSound ""
-	DeathSound ""
-	Decal Bigscorch
-	States
-	{
-	Spawn:
-		ABSH A 0
-		ABSH A 0 A_JumpIfInventory("Rebound",1,"AttainGravity")
-		ABSH A 0 A_GiveInventory("Rebound",1)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 0 A_ChangeFlag("NOGRAVITY",0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 0
-		Goto Spawn+63
-	AttainGravity:
-		ABSH A 0
-		ABSH A 0 A_ChangeFlag("NOGRAVITY",0)
-		ABSH A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		ABSH A 0
-		Loop
-	Death:
-		ABSH A 0 Bright A_PlaySoundEx("abusgun/explode","SoundSlot8")
-		ABSH A 0 Bright A_PlaySoundEx("abusgun/powerhit","SoundSlot10")
-		ABSH A 0 Bright A_Explode
-		ABSH A 0 Bright A_SpawnItemEx("AbusGunCannonExplosion",0,0,0,0,0,0,0,128)
-		ABSH A 0 Bright
-		Stop
-	// Abus Cannon Ball Abus Cannon Ball Abus Cannon Ball *Overload*
-	}
-}
-
 Actor AbusGunCannonExplosion
 {   
    Radius 0
@@ -911,12 +819,6 @@ Actor AbusGunTrail
 		ABSH BCBCBCBCBCBCBCBCBCBC 1 Bright A_FadeOut(0.1)
 		Stop
 	}
-}
-
-Actor Rebound : Inventory
-{
-Inventory.Amount 0
-Inventory.MaxAmount 1
 }
 
 //Annihilator Decorate\\
@@ -6871,139 +6773,6 @@ Actor "Green-Abus" replaces Fatso
   }
 }
 
-Actor AbusCannonBall : Rocket
-{
-	Radius 7
-	Height 7
-	Speed 36
-	Damage 10
-	Scale 0.8
-	Projectile 
-	+RANDOMIZE
-	+NOGRAVITY
-	+FORCEXYBILLBOARD
-	Gravity 1.0
-	-ROCKETTRAIL
-	-NOTIMEFREEZE
-	//RenderStyle Normal
-	Alpha 1.0
-	SeeSound "abus/fire"
-	DeathSound "abus/explode"
-	Decal Bigscorch
-	DamageType "Normal"
-	DontHurtShooter
-	States
-	{
-	Spawn:
-		MXMI A 0
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI AA 0 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 0 A_ChangeFlag("NOGRAVITY",0)
-		MXMI A 1 A_SpawnItemEx("AbusPieceTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-		MXMI A 0
-		Goto Spawn+62
-	Death:
-		MXMI A 0 Bright
-		MXMI A 0 Bright A_Explode(40,48,1)
-		MXMI A 0 Bright A_SpawnItemEx("AbusGunExplosion",0,0,0,0,0,0,0,128)
-		MXMI A 0 Bright
-		Stop
-	}
-}
-
-Actor AbusGunExplosion
-{   
-   Radius 0
-   Height 0
-   Speed 0
-   PROJECTILE
-   +NOCLIP
-   +NOGRAVITY
-   +NOBLOCKMAP
-   +FORCEXYBILLBOARD
-   +NOTIMEFREEZE
-   Scale 1.05
-   RenderStyle Translucent
-   Alpha 0.80
-   States
-   {
-   Spawn:
-   Death:
-      REXP B 0 Bright
-	  REXP BCDEFGHIJKLMNO 2 Bright
-	  REXP O 0 Bright
-      Stop
-   }
-}
-
-Actor AbusPieceTrail
-{
-	Radius 8
-	Height 4
-	Speed 0
-	Damage 0
-	Scale 0.20
-	Projectile
-	+RANDOMIZE
-	BounceType "Doom"
-	+NOCLIP
-	+RIPPER
-	+FORCEXYBILLBOARD
-	+NOTIMEFREEZE
-	-NOGRAVITY
-	Gravity 1.0
-	RenderStyle Add
-	Alpha 1.00
-	SeeSound "none"
-	DeathSound "none"
-	Obituary "%o got owned by an Abus Cannon trail... Ironic, shouldn't %g have HIT the cannon?"
-	States
-	{
-	Spawn:
-	Death:
-		ATRL ABABABABAB 1 Bright A_FadeOut(0.2)
-		Stop
-	}
-}
-
 //===========================================================================
 //
 // Hell Hunter
@@ -9802,16 +9571,16 @@ Actor SorrowSphere : Health replaces BlurSphere //BlurSphere(s) only gets you ki
 //--------------------------------------------------------------------------
 Actor "The Rocket Launcher" : RocketLauncher replaces RocketLauncher
 {
-Weapon.AmmoType "IndividualRocket"
-Weapon.AmmoGive 1
-Weapon.SlotNumber 5
-Weapon.UpSound "rocketlauncherup"
--WEAPON.NOAUTOFIRE
-Inventory.PickupMessage "Grabbed the Rocket Launcher/Abus-Gun."
-Weapon.SisterWeapon "The Abus Gun"
-AttackSound ""
-Obituary "%k made %o give a Rocket-Job."
-States
+	Weapon.AmmoType "IndividualRocket"
+	Weapon.AmmoGive 1
+	Weapon.SlotNumber 5
+	Weapon.UpSound "rocketlauncherup"
+	Weapon.SisterWeapon "The Abus Gun"
+	-WEAPON.NOAUTOFIRE
+	Inventory.PickupMessage "Grabbed the Rocket Launcher/Abus-Gun."
+	Obituary "%k made %o give a Rocket-Job."
+	AttackSound ""
+	States
 	{
 	Select:
 		RLAN A 1 A_Raise
@@ -9829,7 +9598,7 @@ States
 		TNT1 A 0 A_GunFlash
 		TNT1 A 0 //A_GiveInventory("MarineAttacking",1)
 		RLAF A 0 Bright A_PlayWeaponSound("weapons/rlan/fire")
-		RLAF A 0 Bright A_FireCustomMissile("Rocket",0,1,0,0)
+		RLAF A 0 Bright A_FireCustomMissile("DZRocket",0,1,0,0)
 		RLAF A 1 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
 		TNT1 A 0 A_TakeInventory("IAmFiring",1)
 		RLAF ABBCCDDEEFF 1 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
@@ -9843,35 +9612,35 @@ States
 	}
 }
 
-Actor Rocket
+Actor DZRocket replaces Rocket
 {
--ROCKETTRAIL
-+NOTIMEFREEZE
-+RANDOMIZE
-+DEHEXPLOSION
-+FORCEXYBILLBOARD
-Projectile
-SpawnID 127
-Radius 11
-Height 8
-Decal bigscorch
-Speed 28
-Damage 50
-SeeSound ""
-DeathSound "weapons/rlan/explosion"
-Obituary "%k made %o give a Rocket-Job."
-States
+	-ROCKETTRAIL
+	+NOTIMEFREEZE
+	+RANDOMIZE
+	+FORCEXYBILLBOARD
+	Projectile
+	SpawnID 127
+	Radius 11
+	Height 8
+	Decal bigscorch
+	Speed 28
+	Damage 50
+	SeeSound ""
+	DeathSound "weapons/rlan/explosion"
+	Obituary "%k made %o give a Rocket-Job."
+	States
 	{
-  Spawn:
-	RKAT A 0 bright
-	RKAT AAAAA 0 bright A_SpawnItemEx("AbusGunTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-	RKAT A 1 bright A_SpawnItemEx("AbusGunTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
-	RKAT A 0 bright
-    Loop
-  Death:
-	REXP B 2 bright A_Explode
-	REXP CDEFGHIJKLMNO 2 bright
-	Stop
+		Spawn:
+			RKAT A 0 bright
+			RKAT AAAAA 0 bright A_SpawnItemEx("AbusGunTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+			RKAT A 1 bright A_SpawnItemEx("AbusGunTrail",random(0,-50),random(-3,3),random(0,4),0,0,0,0,SXF_CLIENTSIDE,0)
+			RKAT A 0 bright
+			Loop
+		 Death:
+			REXP B 0 bright A_SetTranslucent(1.0, 1)
+			REXP B 2 bright A_Explode
+			REXP CDEFGHIJKLMNO 2 bright
+			Stop
 	}
 }
 
@@ -10744,145 +10513,6 @@ States
     Death:
         TNT1 I 0
         Stop
-    }
-}
-
-//Customized gore system. If you steal, give credit to Helten. Also to MegaBlood.
-
-Actor XBloodDeathSpawner
-{
-    Radius 0
-    Height 0
-    Speed 0
-	Mass 1
-	+DOOMBOUNCE
-	+NOGRAVITY
-	+MISSILE
-    +NOTELEPORT
-	+NOCLIP
-	+SKYEXPLODE
-	+NOBLOCKMAP
-	+NOTIMEFREEZE
-	+CLIENTSIDEONLY
-	-LOWGRAVITY
-    DeathSound "Misc/XDeath1"
-    States
-    {
-    Spawn:
-		TNT1 AAAAAAAAAAAAAAAA 1 A_SpawnItemEx("XBlood2",0,0,0,Random(0,35),0,Random(-20,35),Random(0,360),SXF_CLIENTSIDE,0)
-        Goto Death
-    Death:
-        TNT1 A 1
-        Stop
-    }
-}
-
-Actor XBlood replaces Blood
-{
-    Radius 8
-    Height 8
-    Speed 20
-	Mass 1
-	Decal BloodSplat
-	+CLIENTSIDEONLY
-	+DOOMBOUNCE
-	+MISSILE
-    +NOTELEPORT
-	+NOTIMEFREEZE
-	+NODAMAGE
-	+SKYEXPLODE
-	+NOBLOCKMAP
-	+THRUGHOST
-	+THRUActorS
-	-RIPPER
-	-NOGRAVITY
-	-LOWGRAVITY
-    SeeSound "Misc/XDeath1"
-	DeathSound "Misc/XDeath1"
-	BounceFActor 0.5
-    Scale 0.6
-    States
-    {
-    Spawn:
-	    XDT1 A 0 ThrustThingZ(0,35,0,1)
-		XDT1 A 0 ThrustThingZ(0,35,0,1)
-		XDT1 A 0 ThrustThing(Random(0,360),30,1,0)
-        XDT1 A 1 A_CustomMissile("XBloodTrail",0,0,180,2)
-		XDT1 A 0 A_CheckFloor("Death")
-		XDT1 A 0 A_JumpIf(WaterLevel>0,"Death")
-		XDT1 B 1 A_CustomMissile("XBloodTrail",0,0,180,2)
-		XDT1 A 0 A_CheckFloor("Death")
-		XDT1 A 0 A_JumpIf(WaterLevel>0,"Death")
-		XDT1 C 1 A_CustomMissile("XBloodTrail",0,0,180,2)
-		XDT1 A 0 A_CheckFloor("Death")
-		XDT1 A 0 A_JumpIf(WaterLevel>0,"Death")
-		XDT1 D 1 A_CustomMissile("XBloodTrail",0,0,180,2)
-		XDT1 A 0 A_CheckFloor("Death")
-		XDT1 A 0 A_JumpIf(WaterLevel>0,"Death")
-        Goto Spawn+3
-    Death:
-		XDT1 A 0 A_Stop
-		XDT1 A 0 A_Gravity
-        XDT1 EFGHIJKL 5
-        Stop
-    }
-}
-
-Actor XBlood2 : XBlood
-{
-Decal BloodSplat
-+NOTIMEFREEZE
-States
-    {
-    Spawn:
-        XDT1 A 0 ThrustThingZ(0,35,0,1)
-		XDT1 A 0 ThrustThingZ(0,35,0,1)
-		XDT1 A 1 A_CustomMissile("XBloodTrail",0,0,180,2)
-		XDT1 A 0 A_CheckFloor("Death")
-		XDT1 A 0 A_JumpIf(WaterLevel>0,"Death")
-		XDT1 B 1 A_CustomMissile("XBloodTrail",0,0,180,2)
-		XDT1 A 0 A_CheckFloor("Death")
-		XDT1 A 0 A_JumpIf(WaterLevel>0,"Death")
-		XDT1 C 1 A_CustomMissile("XBloodTrail",0,0,180,2)
-		XDT1 A 0 A_CheckFloor("Death")
-		XDT1 A 0 A_JumpIf(WaterLevel>0,"Death")
-		XDT1 D 1 A_CustomMissile("XBloodTrail",0,0,180,2)
-		XDT1 A 0 A_CheckFloor("Death")
-		XDT1 A 0 A_JumpIf(WaterLevel>0,"Death")
-        Goto Spawn+2
-    Death:
-		XDT1 A 0 A_Stop
-		XDT1 A 0 A_Gravity
-        XDT1 EFGHIJKL 5
-        Stop
-    }
-}
-
-Actor XBloodTrail
-{
-    Radius 1
-    Height 1
-	Alpha 0.3
-	Speed 2
-	RenderStyle Translucent
-	Scale 0.4
-	Gravity 0.02
-	+CLIENTSIDEONLY
-    +NOTELEPORT
-	+NOBLOCKMAP
-	+NOTIMEFREEZE
-	+MISSILE
-	+THRUActorS
-	-NOGRAVITY
-	-LOWGRAVITY
-    States
-    {
-    Spawn:
-        BLOD A 0
-        Goto Death
-	Death:
-	    BLOD AAAAAAAAAAAAAAAAAAAA 1 A_FadeOut(0.02)
-		Stop
     }
 }
 

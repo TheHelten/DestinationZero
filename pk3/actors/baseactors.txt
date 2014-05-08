@@ -1,0 +1,43 @@
+actor BaseEffect
+{
+	Radius 2
+	Height 2
+	+CLIENTSIDEONLY
+	+ALLOWCLIENTSPAWN
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+NOINTERACTION
+	+FORCEXYBILLBOARD
+	+DONTSPLASH
+	+NOTELEPORT
+	+CANNOTPUSH
+	+BLOODLESSIMPACT
+	+NOBLOCKMONST
+	+NOTIMEFREEZE
+	-ACTIVATEIMPACT
+	-ACTIVATEPCROSS
+	States
+	{
+		Spawn:
+			TNT1 AA 1
+			stop
+		Death:
+			TNT1 AA 1
+			stop
+	}
+}
+
+actor GenericTimer : Inventory
+{
+	inventory.amount 1
+	inventory.maxamount 9999
+	-INVENTORY.INVBAR
+	+INVENTORY.UNDROPPABLE
+	+INVENTORY.HUBPOWER
+	States
+	{
+		Spawn:
+			TNT1 A -1
+			stop
+	}
+}
