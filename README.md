@@ -1,7 +1,7 @@
 DestinationZero
 ===============
 
-How to build from the GitHub Client:
+####How to build from the GitHub Client:
 
 1. Choose the repository in the GitHub client:
 ![ScreenShot](http://puu.sh/8FXV0.png)
