@@ -1,4 +1,4 @@
-DestinationZero
+Destination Zero
 ===============
 
 ####How to build from the GitHub Client:
@@ -11,3 +11,5 @@ DestinationZero
 
 3. Type ".\DestZeroGIT" in the command prompt:
 ![ScreenShot](http://puu.sh/8FYpm.png)
+
+4. Press the appropriate number key in the prompt that appears.
