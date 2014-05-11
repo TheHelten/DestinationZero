@@ -806,7 +806,12 @@ $Limit weapons/ssg/fire 0
 
 $Rolloff weapons/ssg/fire linear 200 1600
 
-//$Volume weapons/ssg/fire 8.0
+$Volume weapons/ssg/in 0.725
+$Volume ssgload1 0.725
+$Volume ssgload2 0.725
+$Volume ssgload3 0.725
+$Volume weapons/ssg/open 0.725
+$Volume weapons/ssg/close 0.725
 
 $Limit weapons/ssg/open 0
 $Limit weapons/ssg/close 0

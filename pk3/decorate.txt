@@ -42,6 +42,7 @@ Actor "Medi-kit" : Health replaces Medikit
     Stop
   }
 }
+
 //SVENSK
 Actor ImmuneSphere : PowerupGiver replaces InvulnerabilitySphere
 {
@@ -136,9 +137,10 @@ States
 {
   Spawn:
   	BPFF A 0 Bright
+	BPFF A 0 Bright //Police the fuck.
+	BPFF A 0 Bright A_SpawnItemEx("SparkPuff",Random(-2,2),Random(-2,2),Random(-2,2),Random(0,5),Random(0,5),Random(0,12),0,SXF_CLIENTSIDE,0)
 	BPFF A 0 Bright ThrustThing(Random(0,255),Random(0,4),1,0)
 	BPFF A 0 Bright ThrustThingZ(0,Random(1,3),Random(0,1),Random(0,1))
-	BPFF A 0 Bright A_SpawnItemEx("SparkPuff",Random(-2,2),Random(-2,2),Random(-2,2),Random(0,5),Random(0,5),Random(0,12),0,SXF_CLIENTSIDE,0)
 	BPFF A 0 Bright A_Jump(115,2)
 	BPFF A 0 Bright A_PlaySound("Puff/Richochet")
     BPFF A 4 Bright
