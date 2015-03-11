@@ -11,6 +11,7 @@ $Rolloff Belial/Intro linear 1600 5000
 //SVENSK
 
 Teleport/Start		TELIHELL
+$Volume Teleport/Start 4.5
 $Limit Teleport/Start 0
 
 //SVENSK

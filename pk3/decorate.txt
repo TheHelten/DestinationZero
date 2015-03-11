@@ -3247,14 +3247,6 @@ Actor PlasmaLightningSparkle
 	}
 }
 
-//===========================================================================
-// Broodling Monster, inspired from Starcraft (sounds came from that, too!)
-//
-// I know the sprites aren't gold, and that it looks almost identical to the
-// Larvae. Just try to ignore that... :/ Not everybody is Eriance, for christ
-// sakes. Although, I could TRY later...
-//
-//===========================================================================
 Actor Broodling replaces BloodDemon
 {
   Health 150
@@ -3279,10 +3271,10 @@ Actor Broodling replaces BloodDemon
   -NOTARGET
   -SPAWNCEILING //Because... well, ceiling broodling?
   
-  /*
-  Because this is a break-away from the Larvae, it tends to make
-  me want to - flags not according to the monster, just incase...
-  */
+  
+  //Because this is a break-away from the Larvae, it tends to make
+  //me want to - flags not according to the monster, just incase...
+  
   
   -GHOST
   -PUSHABLE
@@ -5061,7 +5053,7 @@ Actor FateLord replaces Belphegor
 		BALR G 0 A_CustomMissile("FateBoltNH",32,random(-1,1),random(-6,6),0,0)
 		BALR GGGG 1 A_FaceTarget
 		Goto See
-	HealIfLow:
+	/*HealIfLow:
 		BALR E 0
 		BALR E 0 A_JumpIfHealthLower(400,"LoopHealthGain")
 		BALR E 0
@@ -5086,10 +5078,10 @@ Actor FateLord replaces Belphegor
 		BALR H 0 A_JumpIfHealthLower(600,"LoopHealthGain")
 		BALR H 0
 		BALR HHHHHHHHHHHHHHHH 1 A_FaceTarget
-		Goto See
+		Goto See*/
 	Missile:
 		BALR A 0 A_PlaySound("FateLord/Magic")
-		BALR A 0 A_Jump(150,"FireMissile","Fury","FireMissile","Fury","HealIfLow")
+		BALR A 0 A_Jump(150,"FireMissile","Fury","FireMissile","Fury")
 		BALR A 0 A_ExtChase(0,0,0,0)
 		BALR A 0 A_ExtChase(0,0,0,0)
 		BALR A 0 A_ExtChase(0,0,0,0)
@@ -5344,7 +5336,7 @@ Actor FateLord replaces Belphegor
 		BALR H 0 A_ScreamAndUnblock
 		BALR H 0 A_BossDeath
 		BALR H 0
-		BALR H 1 Bright A_FadeOut(0.009)
+		BALR H 1 Bright A_FadeOut(0.012)
 		BALR H 0
 		Goto Death+7
 	}
@@ -6017,7 +6009,157 @@ Actor Archvile 64
 		Goto See
 	RegularLightning:
 		X000 G 0 Bright A_PlaySound("gloam/act")
-		X000 GGGGGGGGGGHHHHHHHHIIIIIIIIJJJJJJJJKKKKKKKKLLLLLLLLMMMMMMMMNNNNNNNNOOOOOOOO 1 Bright A_FaceTarget 
+		//X000 GGGGGGGGGGHHHHHHHHIIIIIIIIJJJJJJJJKKKKKKKKLLLLLLLLMMMMMMMMNNNNNNNNOOOOOOOO 1 Bright A_FaceTarget
+		//^Deprecated ideas are deprecated.
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 GG 0 A_SpawnItemEx("GloamGhostG",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 G 1 Bright A_FaceTarget
+		X000 HH 0 A_SpawnItemEx("GloamGhostH",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 H 1 Bright A_FaceTarget
+		X000 HH 0 A_SpawnItemEx("GloamGhostH",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 H 1 Bright A_FaceTarget
+		X000 HH 0 A_SpawnItemEx("GloamGhostH",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 H 1 Bright A_FaceTarget
+		X000 HH 0 A_SpawnItemEx("GloamGhostH",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 H 1 Bright A_FaceTarget
+		X000 HH 0 A_SpawnItemEx("GloamGhostH",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 H 1 Bright A_FaceTarget
+		X000 HH 0 A_SpawnItemEx("GloamGhostH",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 H 1 Bright A_FaceTarget
+		X000 HH 0 A_SpawnItemEx("GloamGhostH",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 H 1 Bright A_FaceTarget
+		X000 HH 0 A_SpawnItemEx("GloamGhostH",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 H 1 Bright A_FaceTarget
+		X000 II 0 A_SpawnItemEx("GloamGhostI",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 I 1 Bright A_FaceTarget
+		X000 II 0 A_SpawnItemEx("GloamGhostI",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 I 1 Bright A_FaceTarget
+		X000 II 0 A_SpawnItemEx("GloamGhostI",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 I 1 Bright A_FaceTarget
+		X000 II 0 A_SpawnItemEx("GloamGhostI",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 I 1 Bright A_FaceTarget
+		X000 II 0 A_SpawnItemEx("GloamGhostI",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 I 1 Bright A_FaceTarget
+		X000 II 0 A_SpawnItemEx("GloamGhostI",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 I 1 Bright A_FaceTarget
+		X000 II 0 A_SpawnItemEx("GloamGhostI",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 I 1 Bright A_FaceTarget
+		X000 II 0 A_SpawnItemEx("GloamGhostI",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 I 1 Bright A_FaceTarget
+		X000 JJ 0 A_SpawnItemEx("GloamGhostJ",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 J 1 Bright A_FaceTarget
+		X000 JJ 0 A_SpawnItemEx("GloamGhostJ",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 J 1 Bright A_FaceTarget
+		X000 JJ 0 A_SpawnItemEx("GloamGhostJ",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 J 1 Bright A_FaceTarget
+		X000 JJ 0 A_SpawnItemEx("GloamGhostJ",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 J 1 Bright A_FaceTarget
+		X000 JJ 0 A_SpawnItemEx("GloamGhostJ",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 J 1 Bright A_FaceTarget
+		X000 JJ 0 A_SpawnItemEx("GloamGhostJ",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 J 1 Bright A_FaceTarget
+		X000 JJ 0 A_SpawnItemEx("GloamGhostJ",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 J 1 Bright A_FaceTarget
+		X000 JJ 0 A_SpawnItemEx("GloamGhostJ",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 J 1 Bright A_FaceTarget
+		X000 KK 0 A_SpawnItemEx("GloamGhostK",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 K 1 Bright A_FaceTarget
+		X000 KK 0 A_SpawnItemEx("GloamGhostK",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 K 1 Bright A_FaceTarget
+		X000 KK 0 A_SpawnItemEx("GloamGhostK",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 K 1 Bright A_FaceTarget
+		X000 KK 0 A_SpawnItemEx("GloamGhostK",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 K 1 Bright A_FaceTarget
+		X000 KK 0 A_SpawnItemEx("GloamGhostK",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 K 1 Bright A_FaceTarget
+		X000 KK 0 A_SpawnItemEx("GloamGhostK",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 K 1 Bright A_FaceTarget
+		X000 KK 0 A_SpawnItemEx("GloamGhostK",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 K 1 Bright A_FaceTarget
+		X000 KK 0 A_SpawnItemEx("GloamGhostK",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 K 1 Bright A_FaceTarget
+		X000 LL 0 A_SpawnItemEx("GloamGhostL",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 L 1 Bright A_FaceTarget
+		X000 LL 0 A_SpawnItemEx("GloamGhostL",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 L 1 Bright A_FaceTarget
+		X000 LL 0 A_SpawnItemEx("GloamGhostL",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 L 1 Bright A_FaceTarget
+		X000 LL 0 A_SpawnItemEx("GloamGhostL",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 L 1 Bright A_FaceTarget
+		X000 LL 0 A_SpawnItemEx("GloamGhostL",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 L 1 Bright A_FaceTarget
+		X000 LL 0 A_SpawnItemEx("GloamGhostL",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 L 1 Bright A_FaceTarget
+		X000 LL 0 A_SpawnItemEx("GloamGhostL",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 L 1 Bright A_FaceTarget
+		X000 LL 0 A_SpawnItemEx("GloamGhostL",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 L 1 Bright A_FaceTarget
+		X000 MM 0 A_SpawnItemEx("GloamGhostM",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 M 1 Bright A_FaceTarget
+		X000 MM 0 A_SpawnItemEx("GloamGhostM",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 M 1 Bright A_FaceTarget
+		X000 MM 0 A_SpawnItemEx("GloamGhostM",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 M 1 Bright A_FaceTarget
+		X000 MM 0 A_SpawnItemEx("GloamGhostM",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 M 1 Bright A_FaceTarget
+		X000 MM 0 A_SpawnItemEx("GloamGhostM",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 M 1 Bright A_FaceTarget
+		X000 MM 0 A_SpawnItemEx("GloamGhostM",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 M 1 Bright A_FaceTarget
+		X000 MM 0 A_SpawnItemEx("GloamGhostM",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 M 1 Bright A_FaceTarget
+		X000 MM 0 A_SpawnItemEx("GloamGhostM",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 M 1 Bright A_FaceTarget
+		X000 NN 0 A_SpawnItemEx("GloamGhostN",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 N 1 Bright A_FaceTarget
+		X000 NN 0 A_SpawnItemEx("GloamGhostN",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 N 1 Bright A_FaceTarget
+		X000 NN 0 A_SpawnItemEx("GloamGhostN",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 N 1 Bright A_FaceTarget
+		X000 NN 0 A_SpawnItemEx("GloamGhostN",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 N 1 Bright A_FaceTarget
+		X000 NN 0 A_SpawnItemEx("GloamGhostN",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 N 1 Bright A_FaceTarget
+		X000 NN 0 A_SpawnItemEx("GloamGhostN",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 N 1 Bright A_FaceTarget
+		X000 NN 0 A_SpawnItemEx("GloamGhostN",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 N 1 Bright A_FaceTarget
+		X000 NN 0 A_SpawnItemEx("GloamGhostN",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 N 1 Bright A_FaceTarget
+		X000 OO 0 A_SpawnItemEx("GloamGhostO",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 O 1 Bright A_FaceTarget
+		X000 OO 0 A_SpawnItemEx("GloamGhostO",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 O 1 Bright A_FaceTarget
+		X000 OO 0 A_SpawnItemEx("GloamGhostO",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 O 1 Bright A_FaceTarget
+		X000 OO 0 A_SpawnItemEx("GloamGhostO",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 O 1 Bright A_FaceTarget
+		X000 OO 0 A_SpawnItemEx("GloamGhostO",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 O 1 Bright A_FaceTarget
+		X000 OO 0 A_SpawnItemEx("GloamGhostO",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 O 1 Bright A_FaceTarget
+		X000 OO 0 A_SpawnItemEx("GloamGhostO",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 O 1 Bright A_FaceTarget
+		X000 OO 0 A_SpawnItemEx("GloamGhostO",0,0,0,0,0,0,0,SXF_CLIENTSIDE,0)
+		X000 O 1 Bright A_FaceTarget
+		//Cue lightning
 		X000 P 0 Bright A_FaceTarget
 		X000 P 1 Bright A_CustomMissile("GloamBolt",random(30,34),random(-1,1),random(-1,1),0,0)
 		X000 P 0 Bright A_FaceTarget
@@ -6410,6 +6552,7 @@ Actor GloamGhostA
    PROJECTILE
    -NOCLIP
    +NOGRAVITY
+   +CLIENTSIDEONLY
    BounceType "Doom"
    +NOBLOCKMAP
    Scale 1.1058
@@ -6435,6 +6578,7 @@ Actor GloamGhostB
    PROJECTILE
    -NOCLIP
    +NOGRAVITY
+   +CLIENTSIDEONLY
    BounceType "Doom"
    +NOBLOCKMAP
    Scale 1.1058
@@ -6460,6 +6604,7 @@ Actor GloamGhostC
    PROJECTILE
    -NOCLIP
    +NOGRAVITY
+   +CLIENTSIDEONLY
    BounceType "Doom"
    +NOBLOCKMAP
    Scale 1.1058
@@ -6485,6 +6630,7 @@ Actor GloamGhostD
    PROJECTILE
    -NOCLIP
    +NOGRAVITY
+   +CLIENTSIDEONLY
    BounceType "Doom"
    +NOBLOCKMAP
    Scale 1.1058
@@ -6510,6 +6656,7 @@ Actor GloamGhostE
    PROJECTILE
    -NOCLIP
    +NOGRAVITY
+   +CLIENTSIDEONLY
    BounceType "Doom"
    +NOBLOCKMAP
    Scale 1.1058
@@ -6535,6 +6682,7 @@ Actor GloamGhostF
    PROJECTILE
    -NOCLIP
    +NOGRAVITY
+   +CLIENTSIDEONLY
    BounceType "Doom"
    +NOBLOCKMAP
    Scale 1.1058
@@ -6560,6 +6708,7 @@ Actor GloamGhostG
    PROJECTILE
    -NOCLIP
    +NOGRAVITY
+   +CLIENTSIDEONLY
    BounceType "Doom"
    +NOBLOCKMAP
    Scale 1.1058
@@ -6585,6 +6734,7 @@ Actor GloamGhostH
    PROJECTILE
    -NOCLIP
    +NOGRAVITY
+   +CLIENTSIDEONLY
    BounceType "Doom"
    +NOBLOCKMAP
    Scale 1.1058
@@ -6610,6 +6760,7 @@ Actor GloamGhostI
    PROJECTILE
    -NOCLIP
    +NOGRAVITY
+   +CLIENTSIDEONLY
    BounceType "Doom"
    +NOBLOCKMAP
    Scale 1.1058
@@ -6623,6 +6774,162 @@ Actor GloamGhostI
 	  X000 I 0 ThrustThing(random(0,255),random(20,40),1,0)
 	  X000 II 1
 	  X000 I 0
+      Stop
+   }
+}
+
+Actor GloamGhostJ
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   PROJECTILE
+   -NOCLIP
+   +NOGRAVITY
+   +CLIENTSIDEONLY
+   BounceType "Doom"
+   +NOBLOCKMAP
+   Scale 1.1058
+   RenderStyle Translucent
+   Alpha 0.80
+   States
+   {
+   Spawn:
+   Death:
+      X000 J 0 ThrustThingZ(0,random(20,40),random(0,1),random(0,1))
+	  X000 J 0 ThrustThing(random(0,255),random(20,40),1,0)
+	  X000 JJ 1
+	  X000 J 0
+      Stop
+   }
+}
+
+Actor GloamGhostK
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   PROJECTILE
+   -NOCLIP
+   +NOGRAVITY
+   +CLIENTSIDEONLY
+   BounceType "Doom"
+   +NOBLOCKMAP
+   Scale 1.1058
+   RenderStyle Translucent
+   Alpha 0.80
+   States
+   {
+   Spawn:
+   Death:
+      X000 K 0 ThrustThingZ(0,random(20,40),random(0,1),random(0,1))
+	  X000 K 0 ThrustThing(random(0,255),random(20,40),1,0)
+	  X000 KK 1
+	  X000 K 0
+      Stop
+   }
+}
+
+Actor GloamGhostL
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   PROJECTILE
+   -NOCLIP
+   +NOGRAVITY
+   +CLIENTSIDEONLY
+   BounceType "Doom"
+   +NOBLOCKMAP
+   Scale 1.1058
+   RenderStyle Translucent
+   Alpha 0.80
+   States
+   {
+   Spawn:
+   Death:
+      X000 L 0 ThrustThingZ(0,random(20,40),random(0,1),random(0,1))
+	  X000 L 0 ThrustThing(random(0,255),random(20,40),1,0)
+	  X000 LL 1
+	  X000 L 0
+      Stop
+   }
+}
+
+Actor GloamGhostM
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   PROJECTILE
+   -NOCLIP
+   +NOGRAVITY
+   +CLIENTSIDEONLY
+   BounceType "Doom"
+   +NOBLOCKMAP
+   Scale 1.1058
+   RenderStyle Translucent
+   Alpha 0.80
+   States
+   {
+   Spawn:
+   Death:
+      X000 M 0 ThrustThingZ(0,random(20,40),random(0,1),random(0,1))
+	  X000 M 0 ThrustThing(random(0,255),random(20,40),1,0)
+	  X000 MM 1
+	  X000 M 0
+      Stop
+   }
+}
+
+Actor GloamGhostN
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   PROJECTILE
+   -NOCLIP
+   +NOGRAVITY
+   +CLIENTSIDEONLY
+   BounceType "Doom"
+   +NOBLOCKMAP
+   Scale 1.1058
+   RenderStyle Translucent
+   Alpha 0.80
+   States
+   {
+   Spawn:
+   Death:
+      X000 N 0 ThrustThingZ(0,random(20,40),random(0,1),random(0,1))
+	  X000 N 0 ThrustThing(random(0,255),random(20,40),1,0)
+	  X000 NN 1
+	  X000 N 0
+      Stop
+   }
+}
+
+Actor GloamGhostO
+{   
+   Radius 0
+   Height 0
+   Speed 0
+   PROJECTILE
+   -NOCLIP
+   +NOGRAVITY
+   +CLIENTSIDEONLY
+   BounceType "Doom"
+   +NOBLOCKMAP
+   Scale 1.1058
+   RenderStyle Translucent
+   Alpha 0.80
+   States
+   {
+   Spawn:
+   Death:
+      X000 O 0 ThrustThingZ(0,random(20,40),random(0,1),random(0,1))
+	  X000 O 0 ThrustThing(random(0,255),random(20,40),1,0)
+	  X000 OO 1
+	  X000 O 0
       Stop
    }
 }
@@ -7434,7 +7741,7 @@ States
 //===========================================================================
 // Larvae Monster
 //===========================================================================
-
+//Dis monstar sux
 Actor Larvae replaces Demon
 {
   Health 60
@@ -7601,11 +7908,11 @@ Actor LarvaeC replaces Spectre
   DontHurtShooter
   Scale 0.6
   
-  /* The only reason that Alpha and Fuzzy are in the same position is because there has to be
-  some little difference between the original spectre's detection rate, and the Larvae's.
-  There is no chance in hell that without RenderStyle-Fuzzy this would look like a Spectre...
-  Or, at least a shadow of the Spectre's former self.
-  */
+  //The only reason that Alpha and Fuzzy are in the same position is because there has to be
+  //some little difference between the original spectre's detection rate, and the Larvae's.
+  //There is no chance in hell that without RenderStyle-Fuzzy this would look like a Spectre...
+  //Or, at least a shadow of the Spectre's former self.
+  
   
   Alpha 0.5
   RenderStyle Fuzzy
