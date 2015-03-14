@@ -3154,7 +3154,7 @@ Actor LargeBFGBall
 	Radius 18
 	Height 11
 	Speed 11
-	Damage (500)
+	Damage (750)
 	Projectile
 	+RANDOMIZE
 	+NOTIMEFREEZE
@@ -3164,7 +3164,7 @@ Actor LargeBFGBall
 	DontHurtShooter
 	RenderStyle Add
 	Alpha 1.00
-	ExplosionDamage 3400
+	ExplosionDamage 1250
 	ExplosionRadius 312
 	SeeSound ""
 	DeathSound "Weapons/ArcLiteCannonExplosion"
@@ -3173,37 +3173,37 @@ Actor LargeBFGBall
 	{
 	Spawn:
 		SHIT AAA 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT ABB 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT BBA 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT AAA 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT BBB 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT BAA 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT AAB 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT BBB 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT AAA 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT ABB 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT BBA 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT AAA 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT BBB 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT BAA 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT AAB 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		SHIT BBB 1 Bright A_SpawnItemEx("PlasmaLightningSparkle",0,Random(-18,18),Random(-8,24),Random(-10,0),0,Random(-5,5),0,SXF_CLIENTSIDE,0)
-		AHIT A 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
+		AHIT AA 0 Bright A_SpawnItemEx("PlasmaBolt",0,0,8,Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random((Random(-5,-15)),(Random(5,15))),Random(0,360),0,0)
 		AHIT A 0 Bright A_PlaySound("Weapons/Plasmalightning",5)
 		AHIT AAAAAAAA 0 Bright A_SpawnItemEx("PlasmaLightningBolt",0,0,8)
 		AHIT A 0 Bright
@@ -3271,6 +3271,7 @@ Actor PlasmaLightningSparkle
 	}
 }
 
+//Fuck Broodlings. Weiner munching weiners.
 Actor Broodling replaces BloodDemon
 {
   Health 150
