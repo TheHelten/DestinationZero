@@ -465,10 +465,7 @@ $Limit gloam/die 0
 
 abus/sight				DSABUSSI
 
-$Random fatso/active { fatso/active1 fatso/active2 }
-
-abus/active1			DSABUSA1
-abus/active1			DSABUSA2
+fatso/active 			DSABUSAC
 
 $Random abus/pain { abus/pain1 abus/pain2 abus/pain3 }
 
